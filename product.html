@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- SEO: Description, Keywords, Author, and Robots -->
+    <meta name="description"
+        content="Blueberry - Your go-to e-commerce platform for fashion, electronics, and more. Shop with ease and enjoy seamless online shopping." />
+    <meta name="keywords" content="e-commerce, online shopping, fashion, electronics, deals, Blueberry store" />
+    <meta name="author" content="Blueberry Team" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Data for Social Media -->
+    <meta property="og:title" content="Blueberry - E-commerce" />
+    <meta property="og:description"
+        content="Discover the best online shopping experience with Blueberry. Shop fashion, electronics, and more with exclusive deals!" />
+    <meta property="og:image" content="assets/images/logo.png" />
+    <meta property="og:url" content="https://www.blueberry-shop.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Data -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blueberry - E-commerce" />
+    <meta name="twitter:description"
+        content="Shop the latest trends in fashion, electronics, and more at Blueberry. Great deals and fast delivery!" />
+    <meta name="twitter:image" content="assets/images/logo.png" />
+
+    <!-- Favicon and Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Blueberry - E-commerce</title>
+
+</head>
+
+<body>
+    <!-- ***** Header ***** -->
+    <header>
+        <!-- ***** Top Bar ***** -->
+        <div class="top_bar">
+            <div class="container">
+                <p>Flat 50% Off On Grocery Shop.</p>
+
+                <div class="actions">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Currency
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">EUR €</a></li>
+                            <li><a class="dropdown-item" href="#">USD $</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Location
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Egypt</a></li>
+                            <li><a class="dropdown-item" href="#">Saudia Arabia</a></li>
+                            <li><a class="dropdown-item" href="#">Kuwait</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Language
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Arabic</a></li>
+                            <li><a class="dropdown-item" href="#">French</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="faqs.html" class="link">Need Help?</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ***** Navigation ***** -->
+        <nav class="container">
+            <a href="index.html" class="logo"><img src="assets/images/logo.png"></a>
+
+            <form action="products.html">
+                <select name="category" id="category">
+                    <option value="all">All categories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="fashion">Fashion</option>
+                </select>
+                <input type="search" placeholder="Search for products...">
+                <button type="submit"><i class="fa-regular fa-search"></i></button>
+            </form>
+
+            <div class="actions">
+                <a href="login.html">
+                    <img src="assets/images/icons/user.svg" alt="user">
+                    <!-- Accout if authed -->
+                    <h6>Login</h6>
+                </a>
+
+                <a href="wishlist.html">
+                    <img src="assets/images/icons/heart.svg">
+                    <h6>Wishlist</h6>
+                </a>
+
+                <a href="cart.html">
+                    <img src="assets/images/icons/shopping-bag.svg">
+                    <h6>Cart</h6>
+                </a>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- ***** Main Content ***** -->
+    <main>
+        <section class="page_header">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h6>Product Page</h6>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-angles-right"></i>
+                        </li>
+                        <li>
+                            <p>Product Page</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="product_details">
+            <div class="container">
+                <div class="row">
+                    <!-- **** images **** -->
+                    <div class="col-lg-5 col-12 p-2">
+                        <div class="images_container">
+                            <!-- main slider -->
+                            <div class="swiper productSlider2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="galleryImages" href="assets/images/products/1.jpg">
+                                            <img src="assets/images/products/1.jpg" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="galleryImages" href="assets/images/products/2.jpg">
+                                            <img src="assets/images/products/2.jpg" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="galleryImages" href="assets/images/products/3.jpg">
+                                            <img src="assets/images/products/3.jpg" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class=" swiper-slide">
+                                        <a data-fancybox="galleryImages" href="assets/images/products/4.jpg">
+                                            <img src="assets/images/products/4.jpg" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class=" swiper-slide">
+                                        <a data-fancybox="galleryImages" href="assets/images/products/7.jpg">
+                                            <img src="assets/images/products/7.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- thumb slider -->
+                            <div thumbsSlider="" class="swiper productSlider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/products/1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/products/2.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/products/3.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/products/4.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="assets/images/products/7.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- **** main info **** -->
+                    <div class="col-lg-7 col-12 p-2">
+                        <div class="content">
+                            <h4>Ground Nuts Oil Pack 52g</h4>
+                            <div class="d-flex align-items-center gap-2 my-3">
+                                <ul class="rate">
+                                    <li><i class="fas fa-star filled"></i></li>
+                                    <li><i class="fas fa-star filled"></i></li>
+                                    <li><i class="fas fa-star filled"></i></li>
+                                    <li><i class="fas fa-star filled"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <span> | </span>
+                                <span>992 Ratings</span>
+                            </div>
+
+                            <p class="description">
+                                Groundnut Oil Pack (52g) is a premium-quality, 100% pure and natural peanut oil,
+                                carefully extracted to retain its rich flavor and essential nutrients. Ideal for
+                                cooking, frying, and salad dressings, this lightweight pack is perfect for single-use
+                                portions or travel convenience. With its high smoke point and heart-healthy fats, it
+                                enhances the taste of your dishes while promoting a balanced diet. Enjoy the goodness of
+                                groundnut oil in a compact, easy-to-carry pack!
+                            </p>
+
+                            <h6 class="mb-4 price">Price: <span>$923.00</span></h6>
+
+                            <h6>Weight</h6>
+                            <div class="radios">
+                                <label for="250g">
+                                    <input type="radio" name="weight" value="250g" checked>
+                                    <span>250g</span>
+                                </label>
+                                <label for="500g">
+                                    <input type="radio" name="weight" value="500g">
+                                    <span>500g</span>
+                                </label>
+                                <label for="1kg">
+                                    <input type="radio" name="weight" value="1kg">
+                                    <span>1kg</span>
+                                </label>
+                                <label for="2kg">
+                                    <input type="radio" name="weight" value="2kg">
+                                    <span>2kg</span>
+                                </label>
+                            </div>
+
+                            <div class="actions">
+                                <div class="quantity">
+                                    <button><i class="fa-solid fa-minus"></i></button>
+                                    <span>1</span>
+                                    <button><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                                <button class="cart_btn">Add To Cart</button>
+                                <button class="fav_btn">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- **** info and reviews **** -->
+                    <div class="col-12 p-2 mt-4">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                    aria-selected="true">
+                                    Information
+                                </button>
+                            </li>
+
+                            <li>/</li>
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">
+                                    Reviews
+                                </button>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                aria-labelledby="pills-home-tab">
+                                <div class="bordered_container">
+
+                                    <ul class="list-disc pl-[20px]">
+                                        <li><span>Weight</span> 500 g</li>
+                                        <li><span>Dimensions</span> 17 × 15 × 3 cm</li>
+                                        <li><span>Color</span> black,yellow,red</li>
+                                        <li><span>Brand</span> Wonder Fort</li>
+                                        <li><span>Form Factor</span>Whole</li>
+                                        <li><span>Quantity</span>1</li>
+                                        <li><span>Container Type</span>Pouch</li>
+                                        <li><span>Shelf Life</span>12 Months</li>
+                                        <li><span>Ingredients</span>Dalchini, Dhaniya, Badi Elaichi, Laung</li>
+                                        <li><span>Other Features</span>Ingredient Type: Vegetarian</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                aria-labelledby="pills-profile-tab">
+                                <div class="bordered_container">
+                                    <div class="rates">
+                                        <div class="user_rate">
+                                            <img src="assets/images/banner.jpg" alt="">
+                                            <div>
+                                                <h6>Mariya Lykra</h6>
+                                                <ul class="rate">
+                                                    <li><i class="fas fa-star filled"></i></li>
+                                                    <li><i class="fas fa-star filled"></i></li>
+                                                    <li><i class="fas fa-star filled"></i></li>
+                                                    <li><i class="fas fa-star filled"></i></li>
+                                                    <li><i class="fas fa-star"></i></li>
+                                                </ul>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+                                                    hic expedita asperiores eos neque cumque impedit quam, placeat
+                                                    laudantium soluta repellendus possimus a distinctio voluptate
+                                                    veritatis nostrum perspiciatis est! Commodi!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="user_rate">
+                                            <img src="assets/images/banner.jpg" alt="">
+                                            <div>
+                                                <h6>Mariya Lykra</h6>
+                                                <ul class="rate">
+                                                    <li><i class="fas fa-star filled"></i></li>
+                                                    <li><i class="fas fa-star filled"></i></li>
+                                                    <li><i class="fas fa-star filled"></i></li>
+                                                    <li><i class="fas fa-star filled"></i></li>
+                                                    <li><i class="fas fa-star"></i></li>
+                                                </ul>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+                                                    hic expedita asperiores eos neque cumque impedit quam, placeat
+                                                    laudantium soluta repellendus possimus a distinctio voluptate
+                                                    veritatis nostrum perspiciatis est! Commodi!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ***** Footer ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12 p-2">
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png">
+                    </a>
+                    <p>BlueBerry is the biggest market of grocery products. Get your daily needs from our store.</p>
+                    <div class="btns">
+                        <a href="javascript:void(0)">
+                            <img src="assets/images/app-store.svg" alt="app-store">
+                        </a>
+                        <a href="javascript:void(0)">
+                            <img src="assets/images/google-play.svg" alt="google-play">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-12 p-2">
+                    <h3>Category</h3>
+                    <ul>
+                        <li><a href="#">Dairy & Milk</a></li>
+                        <li><a href="#">Snack & Spice</a></li>
+                        <li><a href="#">Fast Food</a></li>
+                        <li><a href="#">Bakery</a></li>
+                        <li><a href="#">Seafood</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-12 p-2">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Legal Notice</a></li>
+                        <li><a href="#">Terms & conditions</a></li>
+                        <li><a href="#">Secure payment</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-12 p-2">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">View Cart</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Become a Vendor</a></li>
+                        <li><a href="#">Affiliate Program</a></li>
+                        <li><a href="#">Payments</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-12 p-2">
+                    <h3>Contact</h3>
+
+                    <ul>
+                        <li><i class="fa-regular fa-map-marker-alt"></i> 1234, 5th Avenue, New York, USA</li>
+                        <li><i class="fa-brands fa-whatsapp"></i> +123 456 7890</li>
+                        <li><i class="fa-regular fa-envelope"></i> example@example.com</li>
+                    </ul>
+
+                    <div class="social">
+                        <a href="javascript:void(0)"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="javascript:void(0)"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="javascript:void(0)"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-12 p-2">
+                    <div class="copy_rights">
+                        <p>Copyright © 2022 BlueBerry. All Rights Reserved.</p>
+                        <div class="payments">
+                            <img src="assets/images/payments/1.svg" alt="mastercard">
+                            <img src="assets/images/payments/2.svg" alt="visa">
+                            <img src="assets/images/payments/3.svg" alt="paypal">
+                            <img src="assets/images/payments/4.svg" alt="apple pay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ***** Scripts ***** -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

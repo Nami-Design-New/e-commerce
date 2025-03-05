@@ -1,0 +1,15 @@
+@import "./config";
+
+body {
+  direction: ltr;
+  font-family: "Outfit", serif;
+  background-color: var(--white);
+
+  @import "./header-footer";
+  @import "./home";
+  @import "./cards";
+
+  main {
+    min-height: calc(100vh - 140px);
+  }
+}
