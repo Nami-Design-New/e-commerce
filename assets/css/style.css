@@ -213,6 +213,55 @@ input[type=checkbox]:checked::after {
   color: var(--white);
   border-radius: 12px;
 }
+.form_ui .image-change-wrapper {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--input-stroke);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+.form_ui .image-change-wrapper label {
+  color: var(--main);
+  font-size: 16px;
+}
+.form_ui .image-change-wrapper .img-wrap {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid var(--input-stroke);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form_ui .image-change-wrapper .img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.form_ui .image-change-wrapper .upload input {
+  display: none;
+}
+.form_ui .image-change-wrapper .upload .plus {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--second);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.form_ui .image-change-wrapper .upload .plus i {
+  font-size: 14px;
+  color: var(--white);
+}
 
 .otp-container {
   display: flex;
@@ -324,15 +373,18 @@ body header nav .actions {
   align-items: center;
   gap: 24px;
 }
-body header nav .actions a {
+body header nav .actions a,
+body header nav .actions .dropdown-toggle {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-body header nav .actions a img {
+body header nav .actions a img,
+body header nav .actions .dropdown-toggle img {
   height: 20px;
 }
-body header nav .actions a h6 {
+body header nav .actions a h6,
+body header nav .actions .dropdown-toggle h6 {
   margin: 0;
   color: var(--main);
 }
@@ -1377,6 +1429,32 @@ body .checkout_section .form_ui {
   border-radius: 16px;
   border: 1px solid var(--input-stroke);
 }
+body .orders_section {
+  padding: 40px 0;
+}
+body .orders_section .nav-pills {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  background: var(--input-bg);
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+body .orders_section .nav-pills .nav-link {
+  background: var(--white);
+  border-radius: 8px;
+  color: var(--main);
+}
+body .orders_section .nav-pills .nav-link.active {
+  background: var(--second);
+  color: var(--white);
+}
+body .edit_profile {
+  padding: 40px 0;
+}
 body .category_card {
   padding: 24px;
   background: var(--light-gray);
@@ -1551,6 +1629,72 @@ body .product_card:hover .media_container .img.back {
 }
 body .product_card:hover .media_container .img.back img {
   transform: scale(1.1);
+}
+body .order_card {
+  padding: 24px;
+  background: var(--input-bg);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body .order_card .title {
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .order_card .title p {
+  font-size: 18px;
+  color: var(--second);
+  font-weight: 600;
+}
+body .order_card .title a {
+  font-size: 16px;
+  color: var(--second);
+}
+body .order_card .location p {
+  font-size: 14px;
+  color: var(--gray);
+}
+body .order_card .location p i {
+  font-size: 18px;
+  color: var(--second);
+}
+body .order_card .time {
+  display: flex;
+  align-items: center;
+}
+body .order_card .time p {
+  flex: 1;
+  font-size: 14px;
+  color: var(--main);
+}
+body .order_card .time p i {
+  font-size: 18px;
+  color: var(--second);
+}
+body .order_card .status {
+  padding: 12px 16px;
+  background: var(--white);
+  color: #479991;
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+body .order_card .status span {
+  line-height: normal;
+}
+body .order_card .status.canceled {
+  background: #f8d7da;
+  color: #d9534f;
+}
+body .order_card p {
+  margin: 0;
 }
 body main {
   min-height: calc(100vh - 140px);

@@ -990,3 +990,31 @@
     border: 1px solid var(--input-stroke);
   }
 }
+
+.orders_section {
+  padding: 40px 0;
+
+  .nav-pills {
+    width: fit-content;
+    margin: 0 auto;
+    background: var(--input-bg);
+    border-radius: 12px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .nav-link {
+      background: var(--white);
+      border-radius: 8px;
+      color: var(--main);
+      &.active {
+        background: var(--second);
+        color: var(--white);
+      }
+    }
+  }
+}
+
+.edit_profile {
+  padding: 40px 0;
+}

@@ -106,11 +106,19 @@
             </form>
 
             <div class="actions">
-                <a href="login.html">
-                    <img src="assets/images/icons/user.svg" alt="user">
-                    <!-- Accout if authed -->
-                    <h6>Login</h6>
-                </a>
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="assets/images/icons/user.svg" alt="user">
+                        <h6>Account</h6>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="edit-profile.html">Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="orders.html">Orders</a></li>
+                        <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                        <li><a class="dropdown-item" href="login.html">Delete Account</a></li>
+                    </ul>
+                </div>
 
                 <a href="wishlist.html">
                     <img src="assets/images/icons/heart.svg">

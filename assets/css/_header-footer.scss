@@ -59,7 +59,8 @@ header {
       display: flex;
       align-items: center;
       gap: 24px;
-      a {
+      a,
+      .dropdown-toggle {
         display: flex;
         align-items: center;
         gap: 8px;
