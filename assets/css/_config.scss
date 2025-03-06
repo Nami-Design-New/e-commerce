@@ -210,12 +210,17 @@ input[type="checkbox"] {
       font-size: 14px;
     }
     input,
-    select {
+    select,
+    textarea {
       width: 100%;
       padding: 12px;
       border-radius: 12px;
       border: 1px solid var(--input-stroke);
       font-size: 14px;
+    }
+
+    textarea {
+      height: 140px;
     }
   }
   a {
