@@ -134,7 +134,7 @@
     }
     .price_quantity {
       @include space-between();
-      .quantity {
+      .q {
         span {
           color: var(--gray);
           font-size: 14px;

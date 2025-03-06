@@ -35,6 +35,8 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css" />
+    <!-- slider css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -150,7 +152,8 @@
         <section class="products_section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 p-2">
+                    <!-- **** filter side **** -->
+                    <div class="col-lg-3 p-2" data-aos="fade-up">
                         <div class="filter_side">
                             <div class="section">
                                 <h3>Category</h3>
@@ -180,13 +183,585 @@
                                         <label for="phone">Phone</label>
                                     </li>
                                     <li>
-                                        <input type="checkbox">
-                                        <a>Watch</a>
+                                        <input type="checkbox" id="watch">
+                                        <label for="watch">Watch</label>
                                     </li>
                                 </ul>
                             </div>
                             <div class="section">
                                 <h3>Weight</h3>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="200gm pack">
+                                        <label for="200gm pack">200gm pack</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="500gm pack">
+                                        <label for="500gm pack">500gm pack</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="1kg pack">
+                                        <label for="1kg pack">1kg pack</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="5kg pack">
+                                        <label for="5kg pack">5kg pack</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="10kg pack">
+                                        <label for="10kg pack">10kg pack</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="section">
+                                <h3>Color</h3>
+                                <ul class="colors">
+                                    <li>
+                                        <label for="#c4d6f9">
+                                            <input type="radio" name="color" id="#c4d6f9" checked>
+                                            <span style="background: #c4d6f9;"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="#ff748b">
+                                            <input type="radio" name="color" id="#ff748b">
+                                            <span style="background: #ff748b;"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="#000000">
+                                            <input type="radio" name="color" id="#000000">
+                                            <span style="background: #000000;"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="#2bff4a">
+                                            <input type="radio" name="color" id="#2bff4a">
+                                            <span style="background: #2bff4a;"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="#ff7c5e">
+                                            <input type="radio" name="color" id="#ff7c5e">
+                                            <span style="background: #ff7c5e;"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="#f155ff">
+                                            <input type="radio" name="color" id="#f155ff">
+                                            <span style="background: #f155ff;"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="#ffef00">
+                                            <input type="radio" name="color" id="#ffef00">
+                                            <span style="background: #ffef00;"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="#c89fff">
+                                            <input type="radio" name="color" id="#c89fff">
+                                            <span style="background: #c89fff;"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="#7bfffa">
+                                            <input type="radio" name="color" id="#7bfffa">
+                                            <span style="background: #7bfffa;"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="#56ffc1">
+                                            <input type="radio" name="color" value="#56ffc1">
+                                            <span style="background: #56ffc1;"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="section">
+                                <div class="price-container">
+                                    <h3>Price</h3>
+                                    <div class="price-display">
+                                        <input type="text" id="priceRange" readonly>
+                                    </div>
+                                    <div id="slider-range"></div>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <h3>Tags</h3>
+                                <ul class="tags">
+                                    <li>
+                                        <label for="Clothes">
+                                            <input type="checkbox" id="Clothes">
+                                            <span>Clothes</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="Fruits">
+                                            <input type="checkbox" id="Fruits">
+                                            <span>Fruits</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="Snacks">
+                                            <input type="checkbox" id="Snacks">
+                                            <span>Snacks</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="Dairy">
+                                            <input type="checkbox" id="Dairy">
+                                            <span>Dairy</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="Seafood">
+                                            <input type="checkbox" id="Seafood">
+                                            <span>Seafood</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="Toys">
+                                            <input type="checkbox" id="Toys">
+                                            <span>Toys</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="perfume">
+                                            <input type="checkbox" id="perfume">
+                                            <span>perfume</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="jewelry">
+                                            <input type="checkbox" id="jewelry">
+                                            <span>jewelry</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="Bags">
+                                            <input type="checkbox" id="Bags">
+                                            <span>Bags</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- **** products side **** -->
+                    <div class="col-lg-9 p-0">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="product_card" data-aos="fade-up">
+                                    <div class="media_container">
+                                        <div class="img front">
+                                            <img src="assets/images/products/11.jpg" alt="p-1">
+                                        </div>
+                                        <div class="img back">
+                                            <img src="assets/images/products/11.jpg" alt="p-1">
+                                            <div class="actions">
+                                                <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                                                <a href="product.html"><i class="fa-regular fa-eye"></i></a>
+                                                <a href="compare.html"><i
+                                                        class="fa-regular fa-arrow-right-arrow-left"></i></a>
+                                                <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="category_rate">
+                                            <span>Fruit</span>
+                                            <ul>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <h6>Red Cherry Serbia</h6>
+                                        <div class="price_quantity">
+                                            <div class="price">
+                                                <span> <b>2.99</b> sar</span>
+                                                <span class="old_price"> 5.50 sar</span>
+                                            </div>
+                                            <div class="q">
+                                                <span>1 Pack</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="product_card" data-aos="fade-up">
+                                    <div class="media_container">
+                                        <div class="img front">
+                                            <div class="thumb">
+                                                <span>SALE</span>
+                                            </div>
+                                            <img src="assets/images/products/7.jpg" alt="p-1">
+                                        </div>
+                                        <div class="img back">
+                                            <img src="assets/images/products/back-7.jpg" alt="p-1">
+                                            <div class="actions">
+                                                <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                                                <a href="product.html"><i class="fa-regular fa-eye"></i></a>
+                                                <a href="compare.html"><i
+                                                        class="fa-regular fa-arrow-right-arrow-left"></i></a>
+                                                <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="category_rate">
+                                            <span>Spices</span>
+                                            <ul>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <h6>Chilli Flakes Pack</h6>
+                                        <div class="price_quantity">
+                                            <div class="price">
+                                                <span> <b>2.99</b> sar</span>
+                                                <span class="old_price"> 5.50 sar</span>
+                                            </div>
+                                            <div class="q">
+                                                <span>500 g</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="product_card" data-aos="fade-up">
+                                    <div class="media_container">
+                                        <div class="img front">
+                                            <img src="assets/images/products/19.jpg" alt="p-1">
+                                        </div>
+                                        <div class="img back">
+                                            <img src="assets/images/products/19.jpg" alt="p-1">
+                                            <div class="actions">
+                                                <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                                                <a href="product.html"><i class="fa-regular fa-eye"></i></a>
+                                                <a href="compare.html"><i
+                                                        class="fa-regular fa-arrow-right-arrow-left"></i></a>
+                                                <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="category_rate">
+                                            <span>Vegetables</span>
+                                            <ul>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <h6>Red organic Onion</h6>
+                                        <div class="price_quantity">
+                                            <div class="price">
+                                                <span> <b>2.99</b> sar</span>
+                                                <span class="old_price"> 5.50 sar</span>
+                                            </div>
+                                            <div class="q">
+                                                <span>1 Pack</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="product_card" data-aos="fade-up">
+                                    <div class="media_container">
+                                        <div class="img front">
+                                            <div class="thumb">
+                                                <span>New</span>
+                                            </div>
+                                            <img src="assets/images/products/14.jpg" alt="p-1">
+                                        </div>
+                                        <div class="img back">
+                                            <img src="assets/images/products/14.jpg" alt="p-1">
+                                            <div class="actions">
+                                                <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                                                <a href="product.html"><i class="fa-regular fa-eye"></i></a>
+                                                <a href="compare.html"><i
+                                                        class="fa-regular fa-arrow-right-arrow-left"></i></a>
+                                                <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="category_rate">
+                                            <span>Fruit</span>
+                                            <ul>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <h6>Red Guava</h6>
+                                        <div class="price_quantity">
+                                            <div class="price">
+                                                <span> <b>2.99</b> sar</span>
+                                                <span class="old_price"> 5.50 sar</span>
+                                            </div>
+                                            <div class="q">
+                                                <span>1 Pack</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="product_card" data-aos="fade-up">
+                                    <div class="media_container">
+                                        <div class="img front">
+                                            <div class="thumb">
+                                                <span>SALE</span>
+                                            </div>
+                                            <img src="assets/images/products/1.jpg" alt="p-1">
+                                        </div>
+                                        <div class="img back">
+                                            <img src="assets/images/products/back-1.jpg" alt="p-1">
+                                            <div class="actions">
+                                                <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                                                <a href="product.html"><i class="fa-regular fa-eye"></i></a>
+                                                <a href="compare.html"><i
+                                                        class="fa-regular fa-arrow-right-arrow-left"></i></a>
+                                                <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="category_rate">
+                                            <span>Chocos</span>
+                                            <ul>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <h6>Mixed Fruits Chocolates Pack</h6>
+                                        <div class="price_quantity">
+                                            <div class="price">
+                                                <span> <b>2.99</b> sar</span>
+                                                <span class="old_price"> 5.50 sar</span>
+                                            </div>
+                                            <div class="q">
+                                                <span>1 Pack</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="product_card" data-aos="fade-up">
+                                    <div class="media_container">
+                                        <div class="img front">
+                                            <div class="thumb">
+                                                <span>NEW</span>
+                                            </div>
+                                            <img src="assets/images/products/2.jpg" alt="p-1">
+                                        </div>
+                                        <div class="img back">
+                                            <img src="assets/images/products/back-2.jpg" alt="p-1">
+                                            <div class="actions">
+                                                <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                                                <a href="product.html"><i class="fa-regular fa-eye"></i></a>
+                                                <a href="compare.html"><i
+                                                        class="fa-regular fa-arrow-right-arrow-left"></i></a>
+                                                <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="category_rate">
+                                            <span>Juices</span>
+                                            <ul>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <h6>Organic Apple Juice Pack</h6>
+                                        <div class="price_quantity">
+                                            <div class="price">
+                                                <span> <b>2.99</b> sar</span>
+                                                <span class="stock"> 3 left</span>
+                                            </div>
+                                            <div class="q">
+                                                <span>1 Pack</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="product_card" data-aos="fade-up">
+                                    <div class="media_container">
+                                        <div class="img front">
+                                            <div class="thumb">
+                                                <span>HOT</span>
+                                            </div>
+                                            <img src="assets/images/products/3.jpg" alt="p-1">
+                                        </div>
+                                        <div class="img back">
+                                            <img src="assets/images/products/back-3.jpg" alt="p-1">
+                                            <div class="actions">
+                                                <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                                                <a href="product.html"><i class="fa-regular fa-eye"></i></a>
+                                                <a href="compare.html"><i
+                                                        class="fa-regular fa-arrow-right-arrow-left"></i></a>
+                                                <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="category_rate">
+                                            <span>Chocos</span>
+                                            <ul>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <h6>Mixed Almond nuts juice Pack</h6>
+                                        <div class="price_quantity">
+                                            <div class="price">
+                                                <span> <b>2.99</b> sar</span>
+                                                <span class="old_price"> 5.50 sar</span>
+                                            </div>
+                                            <div class="q">
+                                                <span>250 g</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="product_card" data-aos="fade-up">
+                                    <div class="media_container">
+                                        <div class="img front">
+                                            <img src="assets/images/products/4.jpg" alt="p-1">
+                                        </div>
+                                        <div class="img back">
+                                            <img src="assets/images/products/back-4.jpg" alt="p-1">
+                                            <div class="actions">
+                                                <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                                                <a href="product.html"><i class="fa-regular fa-eye"></i></a>
+                                                <a href="compare.html"><i
+                                                        class="fa-regular fa-arrow-right-arrow-left"></i></a>
+                                                <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="category_rate">
+                                            <span>Chocos</span>
+                                            <ul>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <h6>Fresh Mango Slice Juice</h6>
+                                        <div class="price_quantity">
+                                            <div class="price">
+                                                <span> <b>2.99</b> sar</span>
+                                                <span class="stock"> out of stock </span>
+                                            </div>
+                                            <div class="q">
+                                                <span>1 Pack</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="product_card" data-aos="fade-up">
+                                    <div class="media_container">
+                                        <div class="img front">
+                                            <div class="thumb">
+                                                <span>HOT</span>
+                                            </div>
+                                            <img src="assets/images/products/3.jpg" alt="p-1">
+                                        </div>
+                                        <div class="img back">
+                                            <img src="assets/images/products/back-3.jpg" alt="p-1">
+                                            <div class="actions">
+                                                <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                                                <a href="product.html"><i class="fa-regular fa-eye"></i></a>
+                                                <a href="compare.html"><i
+                                                        class="fa-regular fa-arrow-right-arrow-left"></i></a>
+                                                <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <div class="category_rate">
+                                            <span>Chocos</span>
+                                            <ul>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star filled"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                            </ul>
+                                        </div>
+                                        <h6>Mixed Almond nuts juice Pack</h6>
+                                        <div class="price_quantity">
+                                            <div class="price">
+                                                <span> <b>2.99</b> sar</span>
+                                                <span class="old_price"> 5.50 sar</span>
+                                            </div>
+                                            <div class="q">
+                                                <span>250 g</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 p-2">
+                                <div class="pagination_container" data-aos="fade-up">
+                                    <h6>Showing 1-12 of 21 item(s)</h6>
+                                    <div class="pagination">
+                                        <button class="prev disabled">
+                                            <i class="fa-regular fa-chevron-left"></i>
+                                        </button>
+
+                                        <button class="active">1</button>
+                                        <button>2</button>
+                                        <button>3</button>
+                                        <button>4</button>
+
+                                        <button class="next active">
+                                            <i class="fa-regular fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -284,6 +859,22 @@
     <!-- ***** Scripts ***** -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 130,
+                max: 500,
+                values: [200, 450],
+                slide: function (event, ui) {
+                    $("#priceRange").val(`$${ui.values[0]} - $${ui.values[1]}`);
+                }
+            });
+            $("#priceRange").val(`$${$("#slider-range").slider("values", 0)} - $${$("#slider-range").slider("values", 1)}`);
+        });
+
+    </script>
 </body>
 
 </html>

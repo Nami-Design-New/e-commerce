@@ -168,7 +168,7 @@ textarea {
 }
 
 input[type="checkbox"] {
-  width: 20px;
+  width: 18px;
   appearance: none;
   position: relative;
   cursor: pointer;
@@ -179,18 +179,19 @@ input[type="checkbox"] {
     top: 50%;
     content: "";
     font-family: "FontAwesome";
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--input-hint);
+    background: var(--white);
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--input-stroke);
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 12px;
     @include centerFlex();
     color: var(--main-color);
   }
   &:checked::after {
     content: "\f00c";
-    background: var(--main-color);
-    color: #fff;
-    border-color: var(--main-color);
+    background: var(--second);
+    color: var(--white);
+    border-color: var(--second);
   }
 }
