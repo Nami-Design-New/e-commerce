@@ -195,3 +195,68 @@ input[type="checkbox"] {
     border-color: var(--second);
   }
 }
+
+.form_ui {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .input_field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    label {
+      color: var(--main);
+      font-weight: 600;
+      font-size: 14px;
+    }
+    input,
+    select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--input-stroke);
+      font-size: 14px;
+    }
+  }
+  a {
+    color: var(--second);
+    font-size: 14px;
+  }
+  .submit_button {
+    padding: 10px;
+    width: 100%;
+    background: var(--second);
+    color: var(--white);
+    border-radius: 12px;
+  }
+}
+
+.otp-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  direction: ltr !important;
+  @media (max-width: 576px) {
+    gap: 8px;
+  }
+  .otp-input {
+    border-radius: 12px;
+    flex: 1;
+    width: inherit;
+    height: 80px !important;
+    text-align: center;
+    border: 1px solid var(--input-stroke);
+    background: var(--input-bg);
+    font-size: 28px !important;
+    font-weight: 600;
+    color: var(--second) !important;
+    outline: none;
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+    @media (max-width: 576px) {
+      height: 60px !important;
+    }
+  }
+}

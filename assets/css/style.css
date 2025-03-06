@@ -175,6 +175,75 @@ input[type=checkbox]:checked::after {
   border-color: var(--second);
 }
 
+.form_ui {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form_ui .input_field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.form_ui .input_field label {
+  color: var(--main);
+  font-weight: 600;
+  font-size: 14px;
+}
+.form_ui .input_field input,
+.form_ui .input_field select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--input-stroke);
+  font-size: 14px;
+}
+.form_ui a {
+  color: var(--second);
+  font-size: 14px;
+}
+.form_ui .submit_button {
+  padding: 10px;
+  width: 100%;
+  background: var(--second);
+  color: var(--white);
+  border-radius: 12px;
+}
+
+.otp-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  direction: ltr !important;
+}
+@media (max-width: 576px) {
+  .otp-container {
+    gap: 8px;
+  }
+}
+.otp-container .otp-input {
+  border-radius: 12px;
+  flex: 1;
+  width: inherit;
+  height: 80px !important;
+  text-align: center;
+  border: 1px solid var(--input-stroke);
+  background: var(--input-bg);
+  font-size: 28px !important;
+  font-weight: 600;
+  color: var(--second) !important;
+  outline: none;
+}
+.otp-container .otp-input::-webkit-inner-spin-button {
+  display: none;
+}
+@media (max-width: 576px) {
+  .otp-container .otp-input {
+    height: 60px !important;
+  }
+}
+
 body {
   direction: ltr;
   font-family: "Outfit", serif;
@@ -1182,6 +1251,36 @@ body .products_section .pagination_container .pagination button.active {
   background: var(--main);
   color: var(--white);
   border-color: var(--main);
+}
+body .auth_section {
+  padding: 40px 0;
+}
+body .auth_section h3 {
+  font-size: 24px;
+  color: var(--main);
+}
+body .auth_section p {
+  color: var(--gray);
+  font-size: 14px;
+}
+body .auth_section p span {
+  color: var(--second);
+  font-weight: 600;
+}
+body .auth_section .img {
+  width: 100%;
+}
+body .auth_section .img img {
+  width: 100%;
+  aspect-ratio: 6/4;
+  border-radius: 16px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+body .auth_section form {
+  margin-inline-end: 24px;
 }
 body .category_card {
   padding: 24px;
