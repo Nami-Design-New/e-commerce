@@ -1636,6 +1636,118 @@ body #productsRateModal .modal-body form button {
   border-radius: 8px;
   font-size: 14px;
 }
+body .terms_conditions_section {
+  padding: 40px 0;
+}
+body .terms_conditions_section .title {
+  color: var(--main);
+  font-size: 24px;
+  font-weight: 600;
+}
+body .terms_conditions_section .title span {
+  color: var(--second);
+}
+body .terms_conditions_section .subtitle {
+  font-size: 14px;
+  color: var(--gray);
+}
+body .terms_conditions_section .content {
+  margin-top: 24px;
+  color: var(--gray);
+}
+body .terms_conditions_section .content b {
+  color: var(--main);
+}
+body .contact_page {
+  padding: 80px 0;
+}
+@media screen and (max-width: 992px) {
+  body .contact_page {
+    padding: 40px 0;
+  }
+}
+body .contact_page .contact_info span {
+  color: var(--white);
+  padding: 4px 12px;
+  background: var(--second);
+  border-radius: 40px;
+  margin-bottom: 16px;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body .contact_page .contact_info h2 {
+  color: var(--main);
+  font-size: 36px;
+}
+@media screen and (max-width: 576px) {
+  body .contact_page .contact_info h2 {
+    font-size: 32px;
+  }
+}
+body .contact_page .contact_info .blocks {
+  margin-top: 16px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+body .contact_page .contact_info .blocks .block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body .contact_page .contact_info .blocks .block a {
+  color: var(--main);
+  transition: 0.3s ease-in-out;
+}
+body .contact_page .contact_info .blocks .block a:hover {
+  color: var(--second);
+}
+body .contact_page .contact_info .blocks .block h6 {
+  margin-top: 24px;
+  color: var(--main);
+}
+body .contact_page .contact_info .blocks .block .socials {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+body .contact_page form {
+  padding: 24px;
+  border: 1px solid var(--input-stroke);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+body .contact_page form .input_field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body .contact_page form .input_field input,
+body .contact_page form .input_field textarea {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--input-stroke);
+}
+body .contact_page button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px 0;
+  border-radius: 12px;
+  background: var(--main);
+  color: var(--white);
+  width: 100%;
+  transition: 0.3s ease-in-out;
+  margin-top: 12px;
+}
+body .contact_page button i {
+  transform: scale(-1);
+}
+body .contact_page button:hover {
+  background: var(--second);
+}
 body .category_card {
   padding: 24px;
   background: var(--light-gray);
