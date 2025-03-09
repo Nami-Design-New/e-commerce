@@ -1217,6 +1217,70 @@
       color: var(--main);
     }
   }
+
+  .faqs {
+    width: 100%;
+    margin: auto;
+  
+    &-title {
+      color: var(--main);
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .accordion-item {
+        border-radius: 16px;
+        overflow: hidden;
+        border: 0;
+        backdrop-filter: blur(6px);
+        transition: 0.3s ease-in-out;
+        background: var(--white);
+        border: 1px solid var(--border);
+        &.active {
+          background: var(--second);
+          button {
+            color: var(--white) !important;
+          }
+          &::after {
+            color: var(--white) !important;
+          }
+        }
+        .accordion-button {
+          box-shadow: none !important;
+          background: transparent !important;
+          color: var(--main) !important;
+          text-align: start;
+          &::after {
+            content: "\f00d";
+            font-family: "Font Awesome 6 Pro";
+            background: none;
+            @include centerFlex();
+            font-size: 16px;
+            font-weight: 400;
+            transform: rotate(135deg);
+            transform-origin: center;
+            margin-right: 0;
+            margin-left: auto;
+          }
+          &:not(.collapsed)::after {
+            transform: rotate(0deg);
+          }
+        }
+        .accordion-body {
+          background: transparent !important;
+          p {
+            color: var(--main) !important;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 .contact_page {
