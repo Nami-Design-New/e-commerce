@@ -1341,7 +1341,12 @@ body .auth_section form {
 body .checkout_section {
   padding: 40px 0;
 }
-body .checkout_section .order_summary {
+body .checkout_section .form_ui {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--input-stroke);
+}
+body .order_summary {
   padding: 16px;
   border: 1px solid var(--input-stroke);
   border-radius: 16px;
@@ -1349,7 +1354,7 @@ body .checkout_section .order_summary {
   flex-direction: column;
   gap: 12px;
 }
-body .checkout_section .order_summary .product {
+body .order_summary .product {
   padding: 12px;
   border-radius: 12px;
   background: var(--second5);
@@ -1357,77 +1362,72 @@ body .checkout_section .order_summary .product {
   align-items: center;
   gap: 16px;
 }
-body .checkout_section .order_summary .product .img {
+body .order_summary .product .img {
   height: 100px;
   aspect-ratio: 1;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--input-stroke);
 }
-body .checkout_section .order_summary .product .img img {
+body .order_summary .product .img img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-body .checkout_section .order_summary .product .content {
+body .order_summary .product .content {
   display: flex;
   flex-direction: column;
 }
-body .checkout_section .order_summary .product .content h6 {
+body .order_summary .product .content h6 {
   color: var(--main);
   font-size: 18px;
 }
-body .checkout_section .order_summary .product .content .price {
+body .order_summary .product .content .price {
   color: var(--gray);
   display: flex;
   align-items: center;
   gap: 12px;
 }
-body .checkout_section .order_summary .product .content .price b {
+body .order_summary .product .content .price b {
   font-size: 18px;
 }
-body .checkout_section .order_summary .product .content .price .old_price {
+body .order_summary .product .content .price .old_price {
   text-decoration: line-through;
   font-size: 14px;
 }
-body .checkout_section .order_summary .product .content .price .stock {
+body .order_summary .product .content .price .stock {
   font-size: 14px;
   color: var(--second);
 }
-body .checkout_section .order_summary .product .content .quantity {
+body .order_summary .product .content .quantity {
   border: 0;
   padding: 0;
   font-size: 12px;
   font-weight: 600;
   color: var(--second);
 }
-body .checkout_section .order_summary .line {
+body .order_summary .line {
   height: 1px;
   width: 100%;
   background: var(--input-stroke);
 }
-body .checkout_section .order_summary ul {
+body .order_summary ul {
   display: flex;
   flex-direction: column;
   margin: 12px;
   gap: 8px;
 }
-body .checkout_section .order_summary ul li {
+body .order_summary ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-body .checkout_section .order_summary ul li span {
+body .order_summary ul li span {
   color: var(--main);
 }
-body .checkout_section .order_summary ul li b {
+body .order_summary ul li b {
   color: var(--second);
-}
-body .checkout_section .form_ui {
-  padding: 16px;
-  border-radius: 16px;
-  border: 1px solid var(--input-stroke);
 }
 body .orders_section {
   padding: 40px 0;
@@ -1454,6 +1454,187 @@ body .orders_section .nav-pills .nav-link.active {
 }
 body .edit_profile {
   padding: 40px 0;
+}
+body .order_details_section {
+  padding: 40px 0;
+}
+body .order_details_section .order_status {
+  padding: 0 12px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body .order_details_section .order_status .progress_state {
+  display: flex;
+  gap: 12px;
+}
+body .order_details_section .order_status .progress_state h6 {
+  font-size: 14px;
+  color: var(--main);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+body .order_details_section .order_status .progress_state .icon {
+  min-width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--second5);
+  border: 1px solid var(--second);
+}
+body .order_details_section .order_status .progress_state .icon i {
+  color: var(--second);
+}
+body .order_details_section .order_status .progress,
+body .order_details_section .order_status .progress-stacked {
+  height: 8px;
+  background: var(--input-bg);
+}
+body .order_details_section .order_status .progress .progress-bar,
+body .order_details_section .order_status .progress-stacked .progress-bar {
+  background: var(--second);
+}
+body .order_details_section .order_status .add_rate {
+  display: flex;
+  gap: 12px;
+}
+body .order_details_section .order_status .add_rate button {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--second);
+  font-size: 14px;
+  color: var(--second);
+}
+body .order_details_section .reciept {
+  background: var(--input-bg);
+  padding: 24px;
+  border-radius: 16px;
+}
+body .order_details_section .reciept ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+body .order_details_section .reciept ul li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+body .order_details_section .reciept ul li .total {
+  font-size: 18px;
+  white-space: nowrap;
+  margin-bottom: 0;
+  flex: 1;
+  color: var(--main);
+  font-weight: 600;
+}
+body .order_details_section .reciept ul li .total span {
+  color: var(--second);
+}
+body .order_details_section .reciept ul li .icon {
+  height: 48px;
+  width: 48px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+body .order_details_section .reciept ul li .icon i {
+  font-size: 18px;
+  color: var(--second);
+}
+body .order_details_section .reciept ul li .text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+body .order_details_section .reciept ul li .text span {
+  font-size: 14px;
+  color: var(--main);
+  line-height: normal;
+}
+body .order_details_section .reciept ul li .text span:last-child {
+  font-size: 12px;
+  color: #777;
+}
+body .order_details_section .cancel_order {
+  margin-top: 16px;
+  background: #000;
+  color: var(--white);
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+}
+body #productsRateModal .modal-header {
+  padding: 16px 16px;
+  border-bottom: 0;
+}
+body #productsRateModal .modal-header h5 {
+  color: var(--main);
+  font-weight: 600;
+  font-size: 14px;
+}
+body #productsRateModal .modal-header .btn-close {
+  box-shadow: none !important;
+  margin-right: 0;
+}
+body #productsRateModal .modal-body {
+  padding: 0 16px 16px;
+}
+body #productsRateModal .modal-body form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+body #productsRateModal .modal-body form .star-rating,
+body #productsRateModal .modal-body form .star-rating-store {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 4px;
+}
+body #productsRateModal .modal-body form .star-rating label,
+body #productsRateModal .modal-body form .star-rating-store label {
+  cursor: pointer;
+  color: #eee;
+}
+body #productsRateModal .modal-body form .star-rating label.active,
+body #productsRateModal .modal-body form .star-rating-store label.active {
+  color: gold;
+}
+body #productsRateModal .modal-body form .star-rating input,
+body #productsRateModal .modal-body form .star-rating-store input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body #productsRateModal .modal-body form textarea {
+  width: 100%;
+  background: var(--input-bg);
+  border: none;
+  outline: none;
+  height: 150px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+body #productsRateModal .modal-body form button {
+  width: 100%;
+  height: 48px;
+  border: none;
+  background: none;
+  outline: none;
+  background: var(--second);
+  color: var(--white);
+  border-radius: 8px;
+  font-size: 14px;
 }
 body .category_card {
   padding: 24px;
