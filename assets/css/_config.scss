@@ -312,3 +312,9 @@ input[type="checkbox"] {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .hide-sm {
+    display: none !important;
+  }
+}

@@ -28,9 +28,6 @@ const categoriesSlider = new Swiper(".categories_swiper", {
       slidesPerView: 3,
     },
     350: {
-      slidesPerView: 2,
-    },
-    0: {
       slidesPerView: 1,
     },
   },
@@ -52,9 +49,6 @@ const dealsSlider = new Swiper(".deals_swiper", {
       slidesPerView: 3,
     },
     350: {
-      slidesPerView: 2,
-    },
-    0: {
       slidesPerView: 1,
     },
   },

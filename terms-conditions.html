@@ -48,7 +48,7 @@
         <!-- ***** Top Bar ***** -->
         <div class="top_bar">
             <div class="container">
-                <p>Flat 50% Off On Grocery Shop.</p>
+                <p class="hide-sm">Flat 50% Off On Grocery Shop.</p>
 
                 <div class="actions">
                     <div class="dropdown">
@@ -86,7 +86,7 @@
                         </ul>
                     </div>
 
-                    <a href="faqs.html" class="link">Need Help?</a>
+                    <a href="faqs.html" class="link hide-sm">Need Help?</a>
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
             <a href="index.html" class="logo"><img src="assets/images/logo.png"></a>
 
             <form action="products.html">
-                <select name="category" id="category">
+                <select name="category" id="category" class="hide-sm">
                     <option value="all">All categories</option>
                     <option value="electronics">Electronics</option>
                     <option value="fashion">Fashion</option>
@@ -105,7 +105,7 @@
                 <button type="submit"><i class="fa-regular fa-search"></i></button>
             </form>
 
-            <div class="actions">
+            <div class="actions hide-sm">
                 <a href="login.html">
                     <img src="assets/images/icons/user.svg" alt="user">
                     <!-- Accout if authed -->
@@ -316,6 +316,36 @@
             </div>
         </div>
     </footer>
+
+    <!-- ***** Responsive Nav ***** -->
+    <div class="responsive_navbar">
+        <ul>
+            <li>
+                <a href="orders.html">
+                    <img src="assets/images/icons/orders.svg">
+                    <h6>My Orders</h6>
+                </a>
+            </li>
+            <li>
+                <a href="wishlist.html">
+                    <img src="assets/images/icons/heart.svg">
+                    <h6>Wishlist</h6>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html">
+                    <img src="assets/images/icons/shopping-bag.svg">
+                    <h6>Cart</h6>
+                </a>
+            </li>
+            <li>
+                <a href="edit-profile.html">
+                    <img src="assets/images/icons/user.svg">
+                    <h6>My Account</h6>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <!-- ***** Scripts ***** -->
     <script src="assets/js/main.js"></script>
