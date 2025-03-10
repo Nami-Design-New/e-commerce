@@ -514,6 +514,19 @@
   .tabel_container {
     border: 1px solid var(--input-stroke);
     border-radius: 12px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
     .table > :not(caption) > * > * {
       padding: 0.75rem;
     }
@@ -546,6 +559,9 @@
         display: flex;
         gap: 12px;
         align-items: center;
+        h6 {
+          white-space: nowrap;
+        }
         img {
           height: 60px;
           border-radius: 12px;
@@ -949,6 +965,10 @@
   }
   form {
     margin-inline-end: 24px;
+
+    @media screen and (max-width: 576px) {
+      margin: 0;
+    }
   }
 }
 
