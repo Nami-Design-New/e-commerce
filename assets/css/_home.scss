@@ -1590,3 +1590,23 @@
     }
   }
 }
+
+.categories_section {
+  padding: 40px 0;
+}
+
+.categories_btn {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    @include centerFlex();
+    width: 42px;
+    border-radius: 8px;
+    height: 42px;
+    padding: 8px;
+    img {
+      height: 24px;
+    }
+    border: 1px solid var(--input-stroke);
+  }
+}

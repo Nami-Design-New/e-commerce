@@ -38,7 +38,7 @@
     <!-- slider css -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=1" />
 
     <title>Blueberry - E-commerce</title>
 
@@ -119,7 +119,13 @@
 
         <!-- ***** Navigation ***** -->
         <nav class="container">
-            <a href="index.html" class="logo"><img src="assets/images/logo.png"></a>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="logo"><img src="assets/images/logo.png"></a>
+
+                <a href="categories.html" class="categories_btn">
+                    <img src="assets/images/icons/categories.svg" alt="">
+                </a>
+            </div>
 
             <form action="products.html">
                 <select name="category" id="category" class="hide-sm">

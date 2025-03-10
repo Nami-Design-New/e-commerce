@@ -2147,6 +2147,27 @@ body .product_view .content .actions .cart_btn {
   font-size: 14px;
   border-radius: 8px;
 }
+body .categories_section {
+  padding: 40px 0;
+}
+body .categories_btn {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  body .categories_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    border-radius: 8px;
+    height: 42px;
+    padding: 8px;
+    border: 1px solid var(--input-stroke);
+  }
+  body .categories_btn img {
+    height: 24px;
+  }
+}
 body .category_card {
   padding: 24px;
   background: var(--light-gray);

@@ -36,7 +36,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=1" />
 
     <title>Blueberry - E-commerce</title>
 
@@ -117,7 +117,13 @@
 
         <!-- ***** Navigation ***** -->
         <nav class="container">
-            <a href="index.html" class="logo"><img src="assets/images/logo.png"></a>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="logo"><img src="assets/images/logo.png"></a>
+
+                <a href="categories.html" class="categories_btn">
+                    <img src="assets/images/icons/categories.svg" alt="">
+                </a>
+            </div>
 
             <form action="products.html">
                 <select name="category" id="category" class="hide-sm">
@@ -137,14 +143,28 @@
                         <h6>Account</h6>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="edit-profile.html"><i class="fa-regular fa-user-pen"></i>
-                                Edit Profile</a></li>
-                        <li><a class="dropdown-item" href="orders.html"><i class="fa-regular fa-cube"></i> Orders</a>
+                        <li>
+                            <a class="dropdown-item" href="edit-profile.html">
+                                <i class="fa-regular fa-user-pen"></i>
+                                Edit Profile
+                            </a>
                         </li>
-                        <li><a class="dropdown-item" href="login.html"><i
-                                    class="fa-regular fa-arrow-right-from-bracket"></i> Logout</a></li>
-                        <li><a class="dropdown-item" href="login.html"><i class="fa-regular fa-user-xmark"></i> Delete
-                                Account</a></li>
+                        <li>
+                            <a class="dropdown-item" href="orders.html">
+                                <i class="fa-regular fa-cube"></i> Orders
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="login.html">
+                                <i class="fa-regular fa-arrow-right-from-bracket"></i> Logout
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="login.html">
+                                <i class="fa-regular fa-user-xmark"></i> Delete
+                                Account
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -156,6 +176,11 @@
                 <a href="cart.html">
                     <img src="assets/images/icons/shopping-bag.svg">
                     <h6>Cart</h6>
+                </a>
+
+                <a href="categories.html">
+                    <img src="assets/images/icons/categories.svg" alt="">
+                    <h6>categories</h6>
                 </a>
             </div>
         </nav>
@@ -340,7 +365,8 @@
                                             <div class="img back">
                                                 <img src="assets/images/products/back-1.jpg" alt="p-1">
                                                 <div class="actions">
-                                                    <button class="fav_btn active"><i class="fa-regular fa-heart"></i></button>
+                                                    <button class="fav_btn active"><i
+                                                            class="fa-regular fa-heart"></i></button>
                                                     <button data-bs-toggle="modal" data-bs-target="#productModal"
                                                         class="eye-btn">
                                                         <i class="fa-regular fa-eye"></i>
@@ -489,7 +515,8 @@
                                             <div class="img back">
                                                 <img src="assets/images/products/back-4.jpg" alt="p-1">
                                                 <div class="actions">
-                                                    <button class="fav_btn active"><i class="fa-regular fa-heart"></i></button>
+                                                    <button class="fav_btn active"><i
+                                                            class="fa-regular fa-heart"></i></button>
                                                     <button data-bs-toggle="modal" data-bs-target="#productModal"
                                                         class="eye-btn">
                                                         <i class="fa-regular fa-eye"></i>

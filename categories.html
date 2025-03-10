@@ -136,11 +136,37 @@
             </form>
 
             <div class="actions hide-sm">
-                <a href="login.html">
-                    <img src="assets/images/icons/user.svg" alt="user">
-                    <!-- Accout if authed -->
-                    <h6>Login</h6>
-                </a>
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="assets/images/icons/user.svg" alt="user">
+                        <h6>Account</h6>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                            <a class="dropdown-item" href="edit-profile.html">
+                                <i class="fa-regular fa-user-pen"></i>
+                                Edit Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="orders.html">
+                                <i class="fa-regular fa-cube"></i> Orders
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="login.html">
+                                <i class="fa-regular fa-arrow-right-from-bracket"></i> Logout
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="login.html">
+                                <i class="fa-regular fa-user-xmark"></i> Delete
+                                Account
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <a href="wishlist.html">
                     <img src="assets/images/icons/heart.svg">
@@ -150,6 +176,11 @@
                 <a href="cart.html">
                     <img src="assets/images/icons/shopping-bag.svg">
                     <h6>Cart</h6>
+                </a>
+
+                <a href="categories.html">
+                    <img src="assets/images/icons/categories.svg" alt="">
+                    <h6>categories</h6>
                 </a>
             </div>
         </nav>
@@ -161,7 +192,7 @@
         <section class="page_header">
             <div class="container">
                 <div class="d-flex align-items-center justify-content-between">
-                    <h6>Cart</h6>
+                    <h6>Categories</h6>
                     <ul>
                         <li>
                             <a href="index.html">Home</a>
@@ -170,163 +201,62 @@
                             <i class="fa-solid fa-angles-right"></i>
                         </li>
                         <li>
-                            <p>cart</p>
+                            <p>categories</p>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- ***** cart ***** -->
-        <section class="cart_section">
+        <section class="categories_section">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 p-2">
-                        <div class="tabel_container">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Product</th>
-                                        <th>Price</th>
-                                        <th>quality</th>
-                                        <th>Total</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td scope="row">
-                                            <div class="product">
-                                                <img src="assets/images/products/1.jpg" alt="1">
-                                                <h6>Ground Nuts Oil Pack</h6>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="center_div">
-                                                $15
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="quantity">
-                                                <button><i class="fa-solid fa-minus"></i></button>
-                                                <span>1</span>
-                                                <button><i class="fa-solid fa-plus"></i></button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="center_div">
-                                                $15
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="center_div">
-                                                <button><i class="fa-solid fa-trash"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row">
-                                            <div class="product">
-                                                <img src="assets/images/products/2.jpg" alt="2">
-                                                <h6>Black Pepper Spice pack</h6>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="center_div">
-                                                $35
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="quantity">
-                                                <button><i class="fa-solid fa-minus"></i></button>
-                                                <span>1</span>
-                                                <button><i class="fa-solid fa-plus"></i></button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="center_div">
-                                                $35
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="center_div">
-                                                <button><i class="fa-solid fa-trash"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row">
-                                            <div class="product">
-                                                <img src="assets/images/products/3.jpg" alt="2">
-                                                <h6>Black Pepper Spice pack</h6>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="center_div">
-                                                $35
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="quantity">
-                                                <button><i class="fa-solid fa-minus"></i></button>
-                                                <span>1</span>
-                                                <button><i class="fa-solid fa-plus"></i></button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="center_div">
-                                                $35
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="center_div">
-                                                <button><i class="fa-solid fa-trash"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td scope="row">
-                                            <div class="product">
-                                                <img src="assets/images/products/4.jpg" alt="2">
-                                                <h6>Black Pepper Spice pack</h6>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="center_div">
-                                                $35
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="quantity">
-                                                <button><i class="fa-solid fa-minus"></i></button>
-                                                <span>1</span>
-                                                <button><i class="fa-solid fa-plus"></i></button>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="center_div">
-                                                $35
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="center_div">
-                                                <button><i class="fa-solid fa-trash"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                        <a href="products.html" class="category_card" style="background: #fef1f1;" data-aos="flip-left">
+                            <img src="assets/images/categories/1.svg" alt="1">
+                            <h6>vegetables</h6>
+                            <p>485 items</p>
+                        </a>
                     </div>
-                    <div class="col-12 p-2 d-flex align-items-center justify-content-between mt-3">
-                        <h4 class="mb-0">Total Cart : <span>$4000</span></h4>
-                        <a href="checkout.html" class="checkout_btn">
-                            Check Out
+                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                        <a href="products.html" class="category_card" style="background: #e1fcf2;" data-aos="flip-left">
+                            <img src="assets/images/categories/2.svg" alt="1">
+                            <h6>Fruits</h6>
+                            <p>291 items</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                        <a href="products.html" class="category_card" style="background: #f4f1fe;" data-aos="flip-left">
+                            <img src="assets/images/categories/3.svg" alt="1">
+                            <h6>Cold Drinks</h6>
+                            <p>45 items</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                        <a href="products.html" class="category_card" style="background: #fbf9e4;" data-aos="flip-left">
+                            <img src="assets/images/categories/4.svg" alt="1">
+                            <h6>Bakery</h6>
+                            <p>85 items</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                        <a href="products.html" class="category_card" style="background: #f4f1fe;" data-aos="flip-left">
+                            <img src="assets/images/categories/5.svg" alt="1">
+                            <h6>Snacks</h6>
+                            <p>85 items</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12 p-2">
+                        <a href="products.html" class="category_card" style="background: #fbf9e4;" data-aos="flip-left">
+                            <img src="assets/images/categories/6.svg" alt="1">
+                            <h6>Fast Food</h6>
+                            <p>25 items</p>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- ***** Footer ***** -->
@@ -437,12 +367,87 @@
                 </a>
             </li>
             <li>
-                <a href="edit-profile.html">
+                <a href="login.html">
                     <img src="assets/images/icons/user.svg">
                     <h6>My Account</h6>
                 </a>
             </li>
         </ul>
+    </div>
+
+    <!-- ***** Modals ***** -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body product_view">
+                    <div class="row">
+                        <div class="col-lg-5 col-12 p-2">
+                            <div class="product_img">
+                                <img src="assets/images/products/11.jpg" alt="11">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-12 p-2">
+                            <div class="content">
+                                <h3>Red Cherry Serbia</h3>
+
+                                <div class="d-flex align-items-center gap-2 my-3">
+                                    <ul class="rate">
+                                        <li><i class="fas fa-star filled"></i></li>
+                                        <li><i class="fas fa-star filled"></i></li>
+                                        <li><i class="fas fa-star filled"></i></li>
+                                        <li><i class="fas fa-star filled"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                    <span> | </span>
+                                    <span>992 Ratings</span>
+                                </div>
+
+                                <p>
+                                    This fresh cherry is a result of careful cultivation and harvesting. Enjoy the sweet
+                                    and tangy taste of our cherry.
+                                </p>
+
+                                <h6 class="mb-4 price">Price: <span>$923.00</span> <span
+                                        class="old_price">$1,000.00</span>
+                                </h6>
+
+                                <h6>Weight</h6>
+                                <div class="radios">
+                                    <label for="250g">
+                                        <input type="radio" name="weight" id="250g" checked>
+                                        <span>250g</span>
+                                    </label>
+                                    <label for="500g">
+                                        <input type="radio" name="weight" id="500g">
+                                        <span>500g</span>
+                                    </label>
+                                    <label for="1kg">
+                                        <input type="radio" name="weight" id="1kg">
+                                        <span>1kg</span>
+                                    </label>
+                                    <label for="2kg">
+                                        <input type="radio" name="weight" id="2kg">
+                                        <span>2kg</span>
+                                    </label>
+                                </div>
+
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <button><i class="fa-solid fa-minus"></i></button>
+                                        <span>1</span>
+                                        <button><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                    <button class="cart_btn">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- ***** Scripts ***** -->
