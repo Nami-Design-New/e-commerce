@@ -512,6 +512,12 @@ body .responsive_navbar {
   left: 0;
   right: 0;
   z-index: 999;
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  body .responsive_navbar {
+    display: block;
+  }
 }
 body .responsive_navbar ul {
   display: flex;
