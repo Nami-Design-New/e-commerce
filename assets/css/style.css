@@ -302,6 +302,19 @@ input[type=checkbox]:checked::after {
     display: none !important;
   }
 }
+.modal-header {
+  border: 0;
+  padding-bottom: 0;
+}
+.modal-header .btn-close {
+  box-shadow: none !important;
+  background-image: url("../images/icons/close.svg");
+}
+
+.modal-content {
+  border-radius: 24px;
+}
+
 body {
   direction: ltr;
   font-family: "Outfit", serif;
@@ -338,6 +351,13 @@ body header .top_bar .container .actions .link {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+body header .top_bar .container .actions img {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 576px) {
   body header .top_bar .container {
@@ -661,19 +681,13 @@ body .hero_section .image_container svg path .hero-image svg path {
 }
 body .hero_section .image_container .animate-shape {
   width: 100%;
+  height: 100%;
   position: absolute;
-  top: -50px;
-  right: -50px;
   z-index: -1;
-}
-@media screen and (max-width: 768px) {
-  body .hero_section .image_container .animate-shape {
-    top: 0;
-    left: 0;
-  }
 }
 body .hero_section .image_container img {
   height: 100%;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -693,21 +707,46 @@ body .categories_section {
 }
 body .categories_section .img {
   width: 100%;
+  position: relative;
 }
 body .categories_section .img img {
   width: 100%;
   border-radius: 32px;
 }
+body .categories_section .img::after {
+  content: "";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  bottom: 187px;
+  right: -1px;
+  background-image: url(../images/categories/top-shape.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+body .categories_section .img::before {
+  content: "";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  bottom: -1px;
+  right: 121px;
+  background-image: url(../images/categories/top-shape.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 body .categories_section .content {
   padding: 0 12px;
 }
 body .categories_section .content h2 {
-  text-shadow: 1px 1px #111a24, -1px 1px #111a24, 1px -1px #111a24, -1px -1px #111a24;
+  color: transparent;
+  -webkit-text-stroke: 2px black;
   font-size: 124px;
   color: var(--white);
   opacity: 0.15;
   letter-spacing: 0.03rem;
   margin-bottom: 38px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 @media screen and (max-width: 768px) {
   body .categories_section .content h2 {
@@ -726,17 +765,6 @@ body .categories_section .categories_swiper {
     margin: 0;
     padding: 0;
   }
-}
-body .categories_section .categories_swiper::after {
-  content: "";
-  height: 30px;
-  width: 30px;
-  position: absolute;
-  top: -30px;
-  left: 92px;
-  background-image: url(../images/categories/top-shape.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 body .products_section {
   padding: 40px 0;
@@ -1154,28 +1182,6 @@ body .product_details .rate i {
 }
 body .product_details .rate i.filled {
   color: var(--star);
-}
-body .product_details .radios {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-body .product_details .radios label {
-  cursor: pointer;
-}
-body .product_details .radios label span {
-  padding: 4px 16px;
-  border: 1px solid var(--input-stroke);
-  color: var(--main);
-  border-radius: 8px;
-  display: block;
-}
-body .product_details .radios label input {
-  display: none;
-}
-body .product_details .radios label input:checked + span {
-  background: var(--second);
-  color: var(--white);
 }
 body .product_details .price {
   color: var(--main);
@@ -1989,6 +1995,90 @@ body .contact_page button i {
 body .contact_page button:hover {
   background: var(--second);
 }
+body .radios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+body .radios label {
+  cursor: pointer;
+}
+body .radios label span {
+  padding: 4px 16px;
+  border: 1px solid var(--input-stroke);
+  color: var(--main);
+  border-radius: 8px;
+  display: block;
+}
+body .radios label input {
+  display: none;
+}
+body .radios label input:checked + span {
+  background: var(--second);
+  color: var(--white);
+}
+body .product_view {
+  padding-top: 0;
+}
+body .product_view .product_img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--input-stroke);
+  border-radius: 12px;
+  overflow: hidden;
+}
+body .product_view .product_img img {
+  width: 100%;
+  height: 100%;
+}
+body .product_view .content h3 {
+  font-size: 24px;
+}
+body .product_view .content p {
+  color: var(--gray);
+}
+body .product_view .content .rate {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+body .product_view .content .rate li {
+  line-height: normal;
+}
+body .product_view .content .rate i {
+  font-size: 12px;
+  color: var(--gray);
+}
+body .product_view .content .rate i.filled {
+  color: var(--star);
+}
+body .product_view .content .price {
+  color: var(--main);
+}
+body .product_view .content .price span {
+  color: var(--second);
+}
+body .product_view .content .price .old_price {
+  color: var(--gray);
+  font-size: 12px;
+  text-decoration: line-through;
+}
+body .product_view .content .actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+body .product_view .content .actions .quantity {
+  margin: 0;
+}
+body .product_view .content .actions .cart_btn {
+  height: 100%;
+  background: var(--second);
+  color: var(--white);
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 8px;
+}
 body .category_card {
   padding: 24px;
   background: var(--light-gray);
@@ -2014,6 +2104,8 @@ body .product_card {
   border: 1px solid var(--input-stroke);
   border-radius: 16px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 body .product_card .media_container {
   display: grid;
@@ -2075,7 +2167,7 @@ body .product_card .media_container .img.back .actions {
   align-items: center;
   gap: 8px;
 }
-body .product_card .media_container .img.back .actions a {
+body .product_card .media_container .img.back .actions button {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -2088,7 +2180,7 @@ body .product_card .media_container .img.back .actions a {
   justify-content: center;
   transition: 0.3s ease-in-out;
 }
-body .product_card .media_container .img.back .actions a:hover {
+body .product_card .media_container .img.back .actions button:hover {
   color: var(--white);
   background: var(--second);
   border-color: var(--second);

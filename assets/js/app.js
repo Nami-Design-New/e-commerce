@@ -89,3 +89,10 @@ var swiper2 = new Swiper(".productSlider2", {
     swiper: swiper,
   },
 });
+
+document.querySelectorAll(".eye-btn").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+  });
+});

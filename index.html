@@ -34,7 +34,7 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -68,9 +68,21 @@
                             Location
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Egypt</a></li>
-                            <li><a class="dropdown-item" href="#">Saudia Arabia</a></li>
-                            <li><a class="dropdown-item" href="#">Kuwait</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="assets/images/flags/Flag_of_Egypt.svg" alt=""> Egypt
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="assets/images/flags/ar.svg" alt=""> Saudia Arabia
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="assets/images/flags/Flag_of_Kuwait.svg" alt=""> Kuwait
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
@@ -80,9 +92,21 @@
                             Language
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                            <li><a class="dropdown-item" href="#">Arabic</a></li>
-                            <li><a class="dropdown-item" href="#">French</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="assets/images/flags/en.png" alt=""> English
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="assets/images/flags/ar.svg" alt=""> Arabic
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="assets/images/flags/sp.svg" alt=""> French
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
@@ -113,10 +137,14 @@
                         <h6>Account</h6>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="edit-profile.html">Edit Profile</a></li>
-                        <li><a class="dropdown-item" href="orders.html">Orders</a></li>
-                        <li><a class="dropdown-item" href="login.html">Logout</a></li>
-                        <li><a class="dropdown-item" href="login.html">Delete Account</a></li>
+                        <li><a class="dropdown-item" href="edit-profile.html"><i class="fa-regular fa-user-pen"></i>
+                                Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="orders.html"><i class="fa-regular fa-cube"></i> Orders</a>
+                        </li>
+                        <li><a class="dropdown-item" href="login.html"><i
+                                    class="fa-regular fa-arrow-right-from-bracket"></i> Logout</a></li>
+                        <li><a class="dropdown-item" href="login.html"><i class="fa-regular fa-user-xmark"></i> Delete
+                                Account</a></li>
                     </ul>
                 </div>
 
@@ -298,7 +326,7 @@
                             <div class="swiper-wrapper">
                                 <!-- slide 1 -->
                                 <div class="swiper-slide">
-                                    <div class="product_card" data-aos="fade-up">
+                                    <a href="product.html" class="product_card" data-aos="fade-up">
                                         <div class="media_container">
                                             <div class="img front">
                                                 <div class="thumb">
@@ -309,11 +337,15 @@
                                             <div class="img back">
                                                 <img src="assets/images/products/back-1.jpg" alt="p-1">
                                                 <div class="actions">
-                                                    <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                                    <a href="product.html"><i class="fa-regular fa-eye"></i></a>
-                                                    <a href="compare.html"><i
-                                                            class="fa-regular fa-arrow-right-arrow-left"></i></a>
-                                                    <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                                    <button><i class="fa-regular fa-heart"></i></button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#productModal"
+                                                        class="eye-btn">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#productModal">
+                                                        <i class="fa-regular fa-arrow-right-arrow-left"></i>
+                                                    </button>
+                                                    <button><i class="fa-regular fa-bag-shopping"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -340,11 +372,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <!-- slide 2 -->
                                 <div class="swiper-slide">
-                                    <div class="product_card" data-aos="fade-up">
+                                    <a href="product.html" class="product_card" data-aos="fade-up">
                                         <div class="media_container">
                                             <div class="img front">
                                                 <div class="thumb">
@@ -355,11 +387,15 @@
                                             <div class="img back">
                                                 <img src="assets/images/products/back-2.jpg" alt="p-1">
                                                 <div class="actions">
-                                                    <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                                    <a href="product.html"><i class="fa-regular fa-eye"></i></a>
-                                                    <a href="compare.html"><i
-                                                            class="fa-regular fa-arrow-right-arrow-left"></i></a>
-                                                    <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                                    <button><i class="fa-regular fa-heart"></i></button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#productModal"
+                                                        class="eye-btn">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#productModal">
+                                                        <i class="fa-regular fa-arrow-right-arrow-left"></i>
+                                                    </button>
+                                                    <button><i class="fa-regular fa-bag-shopping"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -385,11 +421,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <!-- slide 3 -->
                                 <div class="swiper-slide">
-                                    <div class="product_card" data-aos="fade-up">
+                                    <a href="product.html" class="product_card" data-aos="fade-up">
                                         <div class="media_container">
                                             <div class="img front">
                                                 <div class="thumb">
@@ -400,11 +436,15 @@
                                             <div class="img back">
                                                 <img src="assets/images/products/back-3.jpg" alt="p-1">
                                                 <div class="actions">
-                                                    <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                                    <a href="product.html"><i class="fa-regular fa-eye"></i></a>
-                                                    <a href="compare.html"><i
-                                                            class="fa-regular fa-arrow-right-arrow-left"></i></a>
-                                                    <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                                    <button><i class="fa-regular fa-heart"></i></button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#productModal"
+                                                        class="eye-btn">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </button>
+                                                    <button>
+                                                        <i class="fa-regular fa-arrow-right-arrow-left"></i>
+                                                    </button>
+                                                    <button><i class="fa-regular fa-bag-shopping"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -430,11 +470,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <!-- slide 4 -->
                                 <div class="swiper-slide">
-                                    <div class="product_card" data-aos="fade-up">
+                                    <a href="product.html" class="product_card" data-aos="fade-up">
                                         <div class="media_container">
                                             <div class="img front">
                                                 <img src="assets/images/products/4.jpg" alt="p-1">
@@ -442,11 +482,15 @@
                                             <div class="img back">
                                                 <img src="assets/images/products/back-4.jpg" alt="p-1">
                                                 <div class="actions">
-                                                    <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                                    <a href="product.html"><i class="fa-regular fa-eye"></i></a>
-                                                    <a href="compare.html"><i
-                                                            class="fa-regular fa-arrow-right-arrow-left"></i></a>
-                                                    <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                                    <button><i class="fa-regular fa-heart"></i></button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#productModal"
+                                                        class="eye-btn">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#productModal">
+                                                        <i class="fa-regular fa-arrow-right-arrow-left"></i>
+                                                    </button>
+                                                    <button><i class="fa-regular fa-bag-shopping"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -472,7 +516,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -537,7 +581,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-12 p-2">
-                        <div class="product_card" data-aos="fade-up">
+                        <a href="product.html" class="product_card" data-aos="fade-up">
                             <div class="media_container">
                                 <div class="img front">
                                     <img src="assets/images/products/11.jpg" alt="p-1">
@@ -545,10 +589,12 @@
                                 <div class="img back">
                                     <img src="assets/images/products/11.jpg" alt="p-1">
                                     <div class="actions">
-                                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="product.html"><i class="fa-regular fa-eye"></i></a>
-                                        <a href="compare.html"><i class="fa-regular fa-arrow-right-arrow-left"></i></a>
-                                        <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#productModal" class="eye-btn">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                        <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
+                                        <button><i class="fa-regular fa-bag-shopping"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -575,10 +621,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
+
                     <div class="col-lg-3 col-md-6 col-12 p-2">
-                        <div class="product_card" data-aos="fade-up">
+                        <a href="product.html" class="product_card" data-aos="fade-up">
                             <div class="media_container">
                                 <div class="img front">
                                     <div class="thumb">
@@ -589,10 +636,12 @@
                                 <div class="img back">
                                     <img src="assets/images/products/back-7.jpg" alt="p-1">
                                     <div class="actions">
-                                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="product.html"><i class="fa-regular fa-eye"></i></a>
-                                        <a href="compare.html"><i class="fa-regular fa-arrow-right-arrow-left"></i></a>
-                                        <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#productModal" class="eye-btn">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                        <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
+                                        <button><i class="fa-regular fa-bag-shopping"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -619,10 +668,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
+
                     <div class="col-lg-3 col-md-6 col-12 p-2">
-                        <div class="product_card" data-aos="fade-up">
+                        <a href="product.html" class="product_card" data-aos="fade-up">
                             <div class="media_container">
                                 <div class="img front">
                                     <img src="assets/images/products/19.jpg" alt="p-1">
@@ -630,10 +680,12 @@
                                 <div class="img back">
                                     <img src="assets/images/products/19.jpg" alt="p-1">
                                     <div class="actions">
-                                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="product.html"><i class="fa-regular fa-eye"></i></a>
-                                        <a href="compare.html"><i class="fa-regular fa-arrow-right-arrow-left"></i></a>
-                                        <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#productModal" class="eye-btn">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                        <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
+                                        <button><i class="fa-regular fa-bag-shopping"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -660,10 +712,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
+
                     <div class="col-lg-3 col-md-6 col-12 p-2">
-                        <div class="product_card" data-aos="fade-up">
+                        <a href="product.html" class="product_card" data-aos="fade-up">
                             <div class="media_container">
                                 <div class="img front">
                                     <div class="thumb">
@@ -674,10 +727,12 @@
                                 <div class="img back">
                                     <img src="assets/images/products/14.jpg" alt="p-1">
                                     <div class="actions">
-                                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="product.html"><i class="fa-regular fa-eye"></i></a>
-                                        <a href="compare.html"><i class="fa-regular fa-arrow-right-arrow-left"></i></a>
-                                        <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#productModal" class="eye-btn">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                        <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
+                                        <button><i class="fa-regular fa-bag-shopping"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -704,10 +759,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
+
                     <div class="col-lg-3 col-md-6 col-12 p-2">
-                        <div class="product_card" data-aos="fade-up">
+                        <a href="product.html" class="product_card" data-aos="fade-up">
                             <div class="media_container">
                                 <div class="img front">
                                     <div class="thumb">
@@ -718,10 +774,12 @@
                                 <div class="img back">
                                     <img src="assets/images/products/back-1.jpg" alt="p-1">
                                     <div class="actions">
-                                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="product.html"><i class="fa-regular fa-eye"></i></a>
-                                        <a href="compare.html"><i class="fa-regular fa-arrow-right-arrow-left"></i></a>
-                                        <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#productModal" class="eye-btn">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                        <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
+                                        <button><i class="fa-regular fa-bag-shopping"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -748,10 +806,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
+
                     <div class="col-lg-3 col-md-6 col-12 p-2">
-                        <div class="product_card" data-aos="fade-up">
+                        <a href="product.html" class="product_card" data-aos="fade-up">
                             <div class="media_container">
                                 <div class="img front">
                                     <div class="thumb">
@@ -762,10 +821,12 @@
                                 <div class="img back">
                                     <img src="assets/images/products/back-2.jpg" alt="p-1">
                                     <div class="actions">
-                                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="product.html"><i class="fa-regular fa-eye"></i></a>
-                                        <a href="compare.html"><i class="fa-regular fa-arrow-right-arrow-left"></i></a>
-                                        <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#productModal" class="eye-btn">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                        <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
+                                        <button><i class="fa-regular fa-bag-shopping"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -791,10 +852,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
+
                     <div class="col-lg-3 col-md-6 col-12 p-2">
-                        <div class="product_card" data-aos="fade-up">
+                        <a href="product.html" class="product_card" data-aos="fade-up">
                             <div class="media_container">
                                 <div class="img front">
                                     <div class="thumb">
@@ -805,10 +867,12 @@
                                 <div class="img back">
                                     <img src="assets/images/products/back-3.jpg" alt="p-1">
                                     <div class="actions">
-                                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="product.html"><i class="fa-regular fa-eye"></i></a>
-                                        <a href="compare.html"><i class="fa-regular fa-arrow-right-arrow-left"></i></a>
-                                        <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#productModal" class="eye-btn">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                        <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
+                                        <button><i class="fa-regular fa-bag-shopping"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -834,10 +898,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
+
                     <div class="col-lg-3 col-md-6 col-12 p-2">
-                        <div class="product_card" data-aos="fade-up">
+                        <a href="product.html" class="product_card" data-aos="fade-up">
                             <div class="media_container">
                                 <div class="img front">
                                     <img src="assets/images/products/4.jpg" alt="p-1">
@@ -845,10 +910,12 @@
                                 <div class="img back">
                                     <img src="assets/images/products/back-4.jpg" alt="p-1">
                                     <div class="actions">
-                                        <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="product.html"><i class="fa-regular fa-eye"></i></a>
-                                        <a href="compare.html"><i class="fa-regular fa-arrow-right-arrow-left"></i></a>
-                                        <a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a>
+                                        <button><i class="fa-regular fa-heart"></i></button>
+                                        <button data-bs-toggle="modal" data-bs-target="#productModal" class="eye-btn">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </button>
+                                        <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
+                                        <button><i class="fa-regular fa-bag-shopping"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -874,10 +941,10 @@
                                     </div>
                                 </div>
                             </div>
-                            </a>
-                        </div>
+                        </a>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- ***** vendeors ***** -->
@@ -1210,6 +1277,81 @@
                 </a>
             </li>
         </ul>
+    </div>
+
+    <!-- ***** Modals ***** -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body product_view">
+                    <div class="row">
+                        <div class="col-lg-5 col-12 p-2">
+                            <div class="product_img">
+                                <img src="assets/images/products/11.jpg" alt="11">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-12 p-2">
+                            <div class="content">
+                                <h3>Red Cherry Serbia</h3>
+
+                                <div class="d-flex align-items-center gap-2 my-3">
+                                    <ul class="rate">
+                                        <li><i class="fas fa-star filled"></i></li>
+                                        <li><i class="fas fa-star filled"></i></li>
+                                        <li><i class="fas fa-star filled"></i></li>
+                                        <li><i class="fas fa-star filled"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                    <span> | </span>
+                                    <span>992 Ratings</span>
+                                </div>
+
+                                <p>
+                                    This fresh cherry is a result of careful cultivation and harvesting. Enjoy the sweet
+                                    and tangy taste of our cherry.
+                                </p>
+
+                                <h6 class="mb-4 price">Price: <span>$923.00</span> <span
+                                        class="old_price">$1,000.00</span>
+                                </h6>
+
+                                <h6>Weight</h6>
+                                <div class="radios">
+                                    <label for="250g">
+                                        <input type="radio" name="weight" id="250g" checked>
+                                        <span>250g</span>
+                                    </label>
+                                    <label for="500g">
+                                        <input type="radio" name="weight" id="500g">
+                                        <span>500g</span>
+                                    </label>
+                                    <label for="1kg">
+                                        <input type="radio" name="weight" id="1kg">
+                                        <span>1kg</span>
+                                    </label>
+                                    <label for="2kg">
+                                        <input type="radio" name="weight" id="2kg">
+                                        <span>2kg</span>
+                                    </label>
+                                </div>
+
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <button><i class="fa-solid fa-minus"></i></button>
+                                        <span>1</span>
+                                        <button><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                    <button class="cart_btn">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- ***** Scripts ***** -->
