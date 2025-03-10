@@ -384,7 +384,7 @@
                                         <div class="img back">
                                             <img src="assets/images/products/11.jpg" alt="p-1">
                                             <div class="actions">
-                                                <button><i class="fa-regular fa-heart"></i></button>
+                                                <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
                                                         class="eye-btn">
                                                         <i class="fa-regular fa-eye"></i>
@@ -432,7 +432,7 @@
                                         <div class="img back">
                                             <img src="assets/images/products/back-7.jpg" alt="p-1">
                                             <div class="actions">
-                                                <button><i class="fa-regular fa-heart"></i></button>
+                                                <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
                                                         class="eye-btn">
                                                         <i class="fa-regular fa-eye"></i>
@@ -477,7 +477,7 @@
                                         <div class="img back">
                                             <img src="assets/images/products/19.jpg" alt="p-1">
                                             <div class="actions">
-                                                <button><i class="fa-regular fa-heart"></i></button>
+                                                <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
                                                         class="eye-btn">
                                                         <i class="fa-regular fa-eye"></i>
@@ -525,7 +525,7 @@
                                         <div class="img back">
                                             <img src="assets/images/products/14.jpg" alt="p-1">
                                             <div class="actions">
-                                                <button><i class="fa-regular fa-heart"></i></button>
+                                                <button class="fav_btn active"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
                                                         class="eye-btn">
                                                         <i class="fa-regular fa-eye"></i>
@@ -573,7 +573,7 @@
                                         <div class="img back">
                                             <img src="assets/images/products/back-1.jpg" alt="p-1">
                                             <div class="actions">
-                                                <button><i class="fa-regular fa-heart"></i></button>
+                                                <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
                                                         class="eye-btn">
                                                         <i class="fa-regular fa-eye"></i>
@@ -621,7 +621,7 @@
                                         <div class="img back">
                                             <img src="assets/images/products/back-2.jpg" alt="p-1">
                                             <div class="actions">
-                                                <button><i class="fa-regular fa-heart"></i></button>
+                                                <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
                                                         class="eye-btn">
                                                         <i class="fa-regular fa-eye"></i>
@@ -668,7 +668,7 @@
                                         <div class="img back">
                                             <img src="assets/images/products/back-3.jpg" alt="p-1">
                                             <div class="actions">
-                                                <button><i class="fa-regular fa-heart"></i></button>
+                                                <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
                                                         class="eye-btn">
                                                         <i class="fa-regular fa-eye"></i>
@@ -712,7 +712,7 @@
                                         <div class="img back">
                                             <img src="assets/images/products/back-4.jpg" alt="p-1">
                                             <div class="actions">
-                                                <button><i class="fa-regular fa-heart"></i></button>
+                                                <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
                                                         class="eye-btn">
                                                         <i class="fa-regular fa-eye"></i>
@@ -759,7 +759,7 @@
                                         <div class="img back">
                                             <img src="assets/images/products/back-3.jpg" alt="p-1">
                                             <div class="actions">
-                                                <button><i class="fa-regular fa-heart"></i></button>
+                                                <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
                                                         class="eye-btn">
                                                         <i class="fa-regular fa-eye"></i>
@@ -934,6 +934,81 @@
                 </a>
             </li>
         </ul>
+    </div>
+
+    <!-- ***** Modals ***** -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body product_view">
+                    <div class="row">
+                        <div class="col-lg-5 col-12 p-2">
+                            <div class="product_img">
+                                <img src="assets/images/products/11.jpg" alt="11">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-12 p-2">
+                            <div class="content">
+                                <h3>Red Cherry Serbia</h3>
+
+                                <div class="d-flex align-items-center gap-2 my-3">
+                                    <ul class="rate">
+                                        <li><i class="fas fa-star filled"></i></li>
+                                        <li><i class="fas fa-star filled"></i></li>
+                                        <li><i class="fas fa-star filled"></i></li>
+                                        <li><i class="fas fa-star filled"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                    <span> | </span>
+                                    <span>992 Ratings</span>
+                                </div>
+
+                                <p>
+                                    This fresh cherry is a result of careful cultivation and harvesting. Enjoy the sweet
+                                    and tangy taste of our cherry.
+                                </p>
+
+                                <h6 class="mb-4 price">Price: <span>$923.00</span> <span
+                                        class="old_price">$1,000.00</span>
+                                </h6>
+
+                                <h6>Weight</h6>
+                                <div class="radios">
+                                    <label for="250g">
+                                        <input type="radio" name="weight" id="250g" checked>
+                                        <span>250g</span>
+                                    </label>
+                                    <label for="500g">
+                                        <input type="radio" name="weight" id="500g">
+                                        <span>500g</span>
+                                    </label>
+                                    <label for="1kg">
+                                        <input type="radio" name="weight" id="1kg">
+                                        <span>1kg</span>
+                                    </label>
+                                    <label for="2kg">
+                                        <input type="radio" name="weight" id="2kg">
+                                        <span>2kg</span>
+                                    </label>
+                                </div>
+
+                                <div class="actions">
+                                    <div class="quantity">
+                                        <button><i class="fa-solid fa-minus"></i></button>
+                                        <span>1</span>
+                                        <button><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                    <button class="cart_btn">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- ***** Scripts ***** -->

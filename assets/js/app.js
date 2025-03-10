@@ -19,6 +19,8 @@ const categoriesSlider = new Swiper(".categories_swiper", {
   speed: 700,
   autoplay: {
     delay: 3000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
   breakpoints: {
     992: {
@@ -40,6 +42,8 @@ const dealsSlider = new Swiper(".deals_swiper", {
   speed: 700,
   autoplay: {
     delay: 3000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
   breakpoints: {
     992: {

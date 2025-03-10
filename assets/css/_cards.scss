@@ -56,6 +56,19 @@
         object-fit: contain;
         transition: 0.3s ease-in-out;
       }
+      .percentage {
+        position: absolute;
+        top: 16px;
+        right: -22px;
+        transform: rotate(45deg);
+        background: var(--second);
+        color: var(--white);
+        width: 100px;
+        height: 20px;
+        font-size: 12px;
+        @include centerFlex();
+      }
+
       .thumb {
         position: absolute;
         top: 12px;
@@ -96,6 +109,14 @@
               color: var(--white);
               background: var(--second);
               border-color: var(--second);
+            }
+          }
+          .fav_btn.active {
+            background: var(--second);
+            color: var(--white);
+            border-color: var(--second);
+            i {
+              font-weight: 600;
             }
           }
         }
