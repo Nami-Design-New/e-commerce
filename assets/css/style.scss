@@ -715,7 +715,7 @@ main {
     }
   }
 
-  .products_section {
+  .home_products_section {
     padding: 40px 0;
     h2 {
       font-size: 24px;
@@ -1333,6 +1333,110 @@ main {
   .products_section {
     padding: 40px 0;
     position: relative;
+    .vendor {
+      background: var(--second5);
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--input-stroke);
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .image {
+        padding: 16px;
+        background: var(--white);
+        border-radius: 16px;
+        border: 1px solid var(--input-stroke);
+        img {
+          height: 120px;
+        }
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        p {
+          color: var(--gray);
+          font-size: 14px;
+          margin: 0;
+        }
+        h4 {
+          font-size: 22px;
+          margin-bottom: 0;
+          color: var(--main);
+        }
+        .rate {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          li {
+            line-height: normal;
+          }
+          i {
+            font-size: 12px;
+            color: var(--gray);
+            &.filled {
+              color: var(--star);
+            }
+          }
+        }
+        .social {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          a {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            border: 1px solid var(--input-stroke);
+            transition: var(--transition);
+            i {
+              color: var(--second);
+            }
+            &:hover {
+              background: var(--second);
+              border-color: var(--second);
+              i {
+                color: var(--white);
+              }
+            }
+          }
+        }
+      }
+      h3 {
+        color: var(--main);
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      p {
+        color: var(--gray);
+        font-size: 14px;
+      }
+    }
+    .search_container {
+      width: 100%;
+      border: 1px solid var(--input-stroke);
+      border-radius: 12px;
+      padding: 12px 16px;
+      form {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      input {
+        width: 100%;
+      }
+      button {
+        color: var(--gray);
+      }
+    }
     .filter_side {
       position: sticky;
       // top: 252px;
