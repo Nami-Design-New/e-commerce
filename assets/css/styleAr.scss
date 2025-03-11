@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 @mixin centerFlex {
   display: flex;
@@ -337,8 +337,8 @@ input[type="checkbox"] {
 }
 
 body {
-  direction: ltr;
-  font-family: "Outfit", serif;
+  direction: rtl;
+  font-family: "Rubik", sans-serif;
   background-color: var(--white);
 }
 
@@ -400,7 +400,7 @@ header {
         padding: 0 24px;
         appearance: none;
         color: var(--gray);
-        border-right: 1px solid var(--input-stroke);
+        border-left: 1px solid var(--input-stroke);
       }
       input {
         height: 100%;
@@ -614,7 +614,7 @@ main {
             height: 60px;
             position: absolute;
             top: -40px;
-            right: -40px;
+            left: -40px;
             background-image: url("../images/shape-1.png");
             background-size: 100%;
             background-repeat: no-repeat;
@@ -683,7 +683,8 @@ main {
         width: 30px;
         position: absolute;
         bottom: 187px;
-        right: -1px;
+        left: -1px;
+        transform: rotate(90deg);
         background-image: url(../images/categories/top-shape.png);
         background-size: 100%;
         background-repeat: no-repeat;
@@ -694,7 +695,8 @@ main {
         width: 30px;
         position: absolute;
         bottom: -1px;
-        right: 121px;
+        left: 121px;
+        transform: rotate(90deg);
         background-image: url(../images/categories/top-shape.png);
         background-size: 100%;
         background-repeat: no-repeat;
@@ -722,7 +724,7 @@ main {
     }
 
     .categories_swiper {
-      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
       padding: 16px;
       background: var(--white);
       margin-inline-start: -150px;
@@ -2036,8 +2038,8 @@ main {
               font-weight: 400;
               transform: rotate(135deg);
               transform-origin: center;
-              margin-right: 0;
-              margin-left: auto;
+              margin-right: auto;
+              margin-left: 0;
             }
             &:not(.collapsed)::after {
               transform: rotate(0deg);

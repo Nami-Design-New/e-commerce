@@ -155,3 +155,52 @@ window.addEventListener("load", () => {
     });
   }
 });
+
+// Countdown Timer
+function updateCountdown() {
+  const countdownElements = document.querySelectorAll(".countdown_timer");
+
+  countdownElements.forEach((countdown) => {
+    // Set the date we're counting down to (24 hours from now)
+    const now = new Date().getTime();
+    const countDownDate = now + 24 * 60 * 60 * 1000; // 24 hours from now
+
+    // Update the countdown every 1 second
+    const x = setInterval(function () {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Update the HTML
+      countdown.querySelector(".days").innerHTML = days
+        .toString()
+        .padStart(2, "0");
+      countdown.querySelector(".hours").innerHTML = hours
+        .toString()
+        .padStart(2, "0");
+      countdown.querySelector(".minutes").innerHTML = minutes
+        .toString()
+        .padStart(2, "0");
+      countdown.querySelector(".seconds").innerHTML = seconds
+        .toString()
+        .padStart(2, "0");
+
+      // If the countdown is finished, clear the interval
+      if (distance < 0) {
+        clearInterval(x);
+        countdown.innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  });
+}
+
+// Initialize countdown timer
+document.addEventListener("DOMContentLoaded", function () {
+  updateCountdown();
+});
