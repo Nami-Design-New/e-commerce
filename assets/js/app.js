@@ -100,3 +100,58 @@ document.querySelectorAll(".eye-btn").forEach((button) => {
     event.stopPropagation();
   });
 });
+
+const themeCustomer = document.querySelector(".theme_customer");
+const themeCustomerContainer = document.querySelector(
+  ".theme_customer_container"
+);
+const closeBtn = document.querySelector(".close_btn");
+const colorOptions = document.querySelectorAll(".color_option");
+const gearIcon = document.querySelector(".theme_customer > i"); // Select only the gear icon
+
+// Open theme customizer only when clicking the gear icon
+gearIcon.addEventListener("click", (e) => {
+  e.stopPropagation();
+  themeCustomerContainer.classList.add("active");
+});
+
+// Close theme customizer when clicking X button
+closeBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  themeCustomerContainer.classList.remove("active");
+});
+
+// Close theme customizer when clicking outside
+document.addEventListener("click", (e) => {
+  if (
+    !themeCustomerContainer.contains(e.target) &&
+    !gearIcon.contains(e.target)
+  ) {
+    themeCustomerContainer.classList.remove("active");
+  }
+});
+
+// Change secondary color
+colorOptions.forEach((option) => {
+  option.addEventListener("click", (e) => {
+    e.stopPropagation();
+    colorOptions.forEach((opt) => opt.classList.remove("active"));
+    option.classList.add("active");
+    const color = option.getAttribute("data-color");
+    document.documentElement.style.setProperty("--second", color);
+    localStorage.setItem("themeColor", color);
+  });
+});
+
+// Load saved color on page load
+window.addEventListener("load", () => {
+  const savedColor = localStorage.getItem("themeColor");
+  if (savedColor) {
+    document.documentElement.style.setProperty("--second", savedColor);
+    colorOptions.forEach((option) => {
+      if (option.getAttribute("data-color") === savedColor) {
+        option.classList.add("active");
+      }
+    });
+  }
+});

@@ -93,8 +93,11 @@ ul {
   padding: 0;
 }
 
-a {
+a,
+button {
   text-decoration: none;
+  cursor: pointer;
+  color: var(--main);
 }
 
 button,
@@ -1499,20 +1502,6 @@ main {
                 content: "\f00c";
               }
             }
-            span {
-              width: 24px;
-              height: 24px;
-              display: block;
-              border-radius: 50%;
-              position: relative;
-              &::after {
-                content: "";
-                font-family: "FontAwesome";
-                color: var(--white);
-                @include centerAbsolute();
-                font-size: 12px;
-              }
-            }
           }
           &.tags {
             flex-direction: unset;
@@ -1660,6 +1649,7 @@ main {
         margin-top: 12px;
         @media (max-width: 576px) {
           gap: 8px;
+          flex-direction: column;
         }
         button {
           width: 100%;
@@ -2624,5 +2614,107 @@ main {
   }
   p {
     margin: 0;
+  }
+}
+
+.theme_customer {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background: var(--main);
+  color: var(--white);
+  border-radius: 8px 0 0 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  z-index: 9;
+  transition: 0.3s ease-in-out;
+  .fa-gear {
+    animation: spin 4s linear infinite;
+  }
+}
+
+.theme_customer_container {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -300px;
+  background: var(--white);
+  width: 300px;
+  border-radius: 12px 0 0 12px;
+  box-shadow: var(--shadow);
+  transition: 0.3s ease-in-out;
+  z-index: 8;
+
+  &.active {
+    right: 0;
+  }
+}
+
+.theme_customer_header {
+  padding: 16px;
+  border-bottom: 1px solid var(--input-stroke);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h6 {
+    margin: 0;
+    color: var(--main);
+  }
+
+  .close_btn {
+    color: var(--main);
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--second);
+    }
+  }
+}
+
+.theme_customer_body {
+  padding: 16px;
+}
+
+.color_picker {
+  h6 {
+    color: var(--main);
+    margin-bottom: 16px;
+  }
+}
+
+.color_options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.color_option {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 1px var(--input-stroke);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover,
+  &.active {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 1px var(--second);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
