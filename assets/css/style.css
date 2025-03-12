@@ -2214,92 +2214,94 @@ main .contact_page button i {
 main .contact_page button:hover {
   background: var(--second);
 }
-main .radios {
+main .categories_section {
+  padding: 40px 0;
+}
+
+.radios {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
-main .radios label {
+.radios label {
   cursor: pointer;
 }
-main .radios label span {
+.radios label span {
   padding: 4px 16px;
   border: 1px solid var(--input-stroke);
   color: var(--main);
   border-radius: 8px;
   display: block;
 }
-main .radios label input {
+.radios label input {
   display: none;
 }
-main .radios label input:checked + span {
+.radios label input:checked + span {
   background: var(--second);
   color: var(--white);
 }
-main .product_view {
+
+.product_view {
   padding-top: 0;
 }
-main .product_view .product_img {
+.product_view .product_img {
   width: 100%;
   height: 100%;
   border: 1px solid var(--input-stroke);
   border-radius: 12px;
   overflow: hidden;
 }
-main .product_view .product_img img {
+.product_view .product_img img {
   width: 100%;
   height: 100%;
 }
-main .product_view .content h3 {
+.product_view .content h3 {
   font-size: 24px;
 }
-main .product_view .content p {
+.product_view .content p {
   color: var(--gray);
 }
-main .product_view .content .rate {
+.product_view .content .rate {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-main .product_view .content .rate li {
+.product_view .content .rate li {
   line-height: normal;
 }
-main .product_view .content .rate i {
+.product_view .content .rate i {
   font-size: 12px;
   color: var(--gray);
 }
-main .product_view .content .rate i.filled {
+.product_view .content .rate i.filled {
   color: var(--star);
 }
-main .product_view .content .price {
+.product_view .content .price {
   color: var(--main);
 }
-main .product_view .content .price span {
+.product_view .content .price span {
   color: var(--second);
 }
-main .product_view .content .price .old_price {
+.product_view .content .price .old_price {
   color: var(--gray);
   font-size: 12px;
   text-decoration: line-through;
 }
-main .product_view .content .actions {
+.product_view .content .actions {
   display: flex;
   gap: 12px;
   margin-top: 24px;
 }
-main .product_view .content .actions .quantity {
+.product_view .content .actions .quantity {
   margin: 0;
 }
-main .product_view .content .actions .cart_btn {
+.product_view .content .actions .cart_btn {
   height: 100%;
   background: var(--second);
   color: var(--white);
   padding: 12px 24px;
   font-size: 14px;
   border-radius: 8px;
-}
-main .categories_section {
-  padding: 40px 0;
 }
 
 .responsive_navbar {
