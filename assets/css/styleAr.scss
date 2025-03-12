@@ -1504,6 +1504,23 @@ main {
                 content: "\f00c";
               }
             }
+            span {
+              width: 24px;
+              height: 24px;
+              border-radius: 50px;
+              font-size: 14px;
+              display: block;
+              position: relative;
+              &::after {
+                content: "";
+                font-family: "Font Awesome 6 Pro";
+                position: absolute;
+                top: 50%;
+                color: var(--white);
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
           }
           &.tags {
             flex-direction: unset;
@@ -2392,7 +2409,8 @@ main {
       .countdown_timer {
         position: absolute;
         bottom: 16px;
-        left: 16px;
+        left: 50%;
+        transform: translateX(-50%);
         background: rgba(255, 255, 255, 0.95);
         padding: 8px 12px;
         border-radius: 8px;
