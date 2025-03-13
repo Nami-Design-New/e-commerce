@@ -40,6 +40,20 @@
 
     <title>Blueberry - E-commerce</title>
 
+    <script>
+        window.addEventListener("load", () => {
+            const savedColor = localStorage.getItem("themeColor");
+            if (savedColor) {
+                document.documentElement.style.setProperty("--second", savedColor);
+                colorOptions.forEach((option) => {
+                    if (option.getAttribute("data-color") === savedColor) {
+                        option.classList.add("active");
+                    }
+                });
+            }
+        });
+    </script>
+
 </head>
 
 <body>
@@ -305,7 +319,7 @@
                             </div> -->
 
                             <!-- **** order canceled **** -->
-                            <div class="col-12 p-0">
+                            <!-- <div class="col-12 p-0">
                                 <div class="order_status">
                                     <div class="progress_state">
                                         <div class="icon">
@@ -323,10 +337,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- **** order finished **** -->
-                            <!-- <div class="col-12 p-0">
+                            <div class="col-12 p-0">
                                 <div class="order_status">
                                     <div class="progress_state">
                                         <div class="icon">
@@ -352,7 +366,7 @@
                                         </button>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
 
                         <div class="reciept">

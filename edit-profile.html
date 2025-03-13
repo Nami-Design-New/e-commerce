@@ -40,6 +40,20 @@
 
     <title>Blueberry - E-commerce</title>
 
+    <script>
+        window.addEventListener("load", () => {
+            const savedColor = localStorage.getItem("themeColor");
+            if (savedColor) {
+                document.documentElement.style.setProperty("--second", savedColor);
+                colorOptions.forEach((option) => {
+                    if (option.getAttribute("data-color") === savedColor) {
+                        option.classList.add("active");
+                    }
+                });
+            }
+        });
+    </script>
+
 </head>
 
 <body>
