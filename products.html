@@ -38,7 +38,7 @@
     <!-- slider css -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/style.css?v=3" />
+    <link rel="stylesheet" href="assets/css/style.css?v=4" />
 
     <title>Blueberry - E-commerce</title>
 
@@ -395,10 +395,30 @@
                     <!-- **** products side **** -->
                     <div class="col-lg-9 p-0">
                         <div class="row">
-                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                            <!-- **** filter products **** -->
+                            <div class="col-12 p-2">
+                                <div class="filter_products">
+                                    <div class="listing_type">
+                                        <button class="active" id="grid"><i class="fa-solid fa-grid-2"></i></button>
+                                        <button id="list"><i class="fa-solid fa-list-ul"></i></button>
+                                    </div>
+
+                                    <select name="sort" id="sort">
+                                        <option value="newest">Newest</option>
+                                        <option value="oldest">Oldest</option>
+                                        <option value="price-asc">Price (asc)</option>
+                                        <option value="price-desc">Price (desc)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12 p-2 grid_item">
                                 <a href="product.html" class="product_card" data-aos="fade-up">
                                     <div class="media_container">
                                         <div class="img front">
+                                            <div class="percentage">
+                                                <span>30%</span>
+                                            </div>
                                             <img src="assets/images/products/11.jpg" alt="p-1">
                                         </div>
                                         <div class="img back">
@@ -406,9 +426,9 @@
                                             <div class="actions">
                                                 <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
-                                                        class="eye-btn">
-                                                        <i class="fa-regular fa-eye"></i>
-                                                    </button>
+                                                    class="eye-btn">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </button>
                                                 <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
                                                 <button><i class="fa-regular fa-bag-shopping"></i></button>
                                             </div>
@@ -427,6 +447,11 @@
                                             </ul>
                                         </div>
                                         <h6>Red Cherry Serbia</h6>
+                                        <p class="description">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consectetur
+                                            sit mollitia nihil magnam perspiciatis eos atque qui cupiditate delectus.
+                                            Provident totam optio sapiente nam.
+                                        </p>
                                         <div class="price_quantity">
                                             <div class="price">
                                                 <span> <b>2.99</b> sar</span>
@@ -440,7 +465,7 @@
                                 </a>
                             </div>
 
-                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                            <div class="col-lg-4 col-md-6 col-12 p-2 grid_item">
                                 <a href="product.html" class="product_card" data-aos="fade-up">
                                     <div class="media_container">
                                         <div class="img front">
@@ -454,9 +479,9 @@
                                             <div class="actions">
                                                 <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
-                                                        class="eye-btn">
-                                                        <i class="fa-regular fa-eye"></i>
-                                                    </button>
+                                                    class="eye-btn">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </button>
                                                 <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
                                                 <button><i class="fa-regular fa-bag-shopping"></i></button>
                                             </div>
@@ -475,6 +500,11 @@
                                             </ul>
                                         </div>
                                         <h6>Chilli Flakes Pack</h6>
+                                        <p class="description">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consectetur
+                                            sit mollitia nihil magnam perspiciatis eos atque qui cupiditate delectus.
+                                            Provident totam optio sapiente nam.
+                                        </p>
                                         <div class="price_quantity">
                                             <div class="price">
                                                 <span> <b>2.99</b> sar</span>
@@ -488,7 +518,7 @@
                                 </a>
                             </div>
 
-                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                            <div class="col-lg-4 col-md-6 col-12 p-2 grid_item">
                                 <a href="product.html" class="product_card" data-aos="fade-up">
                                     <div class="media_container">
                                         <div class="img front">
@@ -499,9 +529,9 @@
                                             <div class="actions">
                                                 <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
-                                                        class="eye-btn">
-                                                        <i class="fa-regular fa-eye"></i>
-                                                    </button>
+                                                    class="eye-btn">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </button>
                                                 <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
                                                 <button><i class="fa-regular fa-bag-shopping"></i></button>
                                             </div>
@@ -520,6 +550,11 @@
                                             </ul>
                                         </div>
                                         <h6>Red organic Onion</h6>
+                                        <p class="description">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consectetur
+                                            sit mollitia nihil magnam perspiciatis eos atque qui cupiditate delectus.
+                                            Provident totam optio sapiente nam.
+                                        </p>
                                         <div class="price_quantity">
                                             <div class="price">
                                                 <span> <b>2.99</b> sar</span>
@@ -533,7 +568,7 @@
                                 </a>
                             </div>
 
-                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                            <div class="col-lg-4 col-md-6 col-12 p-2 grid_item">
                                 <a href="product.html" class="product_card" data-aos="fade-up">
                                     <div class="media_container">
                                         <div class="img front">
@@ -545,11 +580,12 @@
                                         <div class="img back">
                                             <img src="assets/images/products/14.jpg" alt="p-1">
                                             <div class="actions">
-                                                <button class="fav_btn active"><i class="fa-regular fa-heart"></i></button>
+                                                <button class="fav_btn active"><i
+                                                        class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
-                                                        class="eye-btn">
-                                                        <i class="fa-regular fa-eye"></i>
-                                                    </button>
+                                                    class="eye-btn">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </button>
                                                 <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
                                                 <button><i class="fa-regular fa-bag-shopping"></i></button>
                                             </div>
@@ -568,6 +604,11 @@
                                             </ul>
                                         </div>
                                         <h6>Red Guava</h6>
+                                        <p class="description">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consectetur
+                                            sit mollitia nihil magnam perspiciatis eos atque qui cupiditate delectus.
+                                            Provident totam optio sapiente nam.
+                                        </p>
                                         <div class="price_quantity">
                                             <div class="price">
                                                 <span> <b>2.99</b> sar</span>
@@ -581,12 +622,15 @@
                                 </a>
                             </div>
 
-                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                            <div class="col-lg-4 col-md-6 col-12 p-2 grid_item">
                                 <a href="product.html" class="product_card" data-aos="fade-up">
                                     <div class="media_container">
                                         <div class="img front">
                                             <div class="thumb">
                                                 <span>SALE</span>
+                                            </div>
+                                            <div class="percentage">
+                                                <span>30%</span>
                                             </div>
                                             <img src="assets/images/products/1.jpg" alt="p-1">
                                         </div>
@@ -595,9 +639,9 @@
                                             <div class="actions">
                                                 <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
-                                                        class="eye-btn">
-                                                        <i class="fa-regular fa-eye"></i>
-                                                    </button>
+                                                    class="eye-btn">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </button>
                                                 <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
                                                 <button><i class="fa-regular fa-bag-shopping"></i></button>
                                             </div>
@@ -616,6 +660,11 @@
                                             </ul>
                                         </div>
                                         <h6>Mixed Fruits Chocolates Pack</h6>
+                                        <p class="description">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consectetur
+                                            sit mollitia nihil magnam perspiciatis eos atque qui cupiditate delectus.
+                                            Provident totam optio sapiente nam.
+                                        </p>
                                         <div class="price_quantity">
                                             <div class="price">
                                                 <span> <b>2.99</b> sar</span>
@@ -629,7 +678,7 @@
                                 </a>
                             </div>
 
-                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                            <div class="col-lg-4 col-md-6 col-12 p-2 grid_item">
                                 <a href="product.html" class="product_card" data-aos="fade-up">
                                     <div class="media_container">
                                         <div class="img front">
@@ -643,9 +692,9 @@
                                             <div class="actions">
                                                 <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
-                                                        class="eye-btn">
-                                                        <i class="fa-regular fa-eye"></i>
-                                                    </button>
+                                                    class="eye-btn">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </button>
                                                 <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
                                                 <button><i class="fa-regular fa-bag-shopping"></i></button>
                                             </div>
@@ -663,6 +712,11 @@
                                             </ul>
                                         </div>
                                         <h6>Organic Apple Juice Pack</h6>
+                                        <p class="description">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consectetur
+                                            sit mollitia nihil magnam perspiciatis eos atque qui cupiditate delectus.
+                                            Provident totam optio sapiente nam.
+                                        </p>
                                         <div class="price_quantity">
                                             <div class="price">
                                                 <span> <b>2.99</b> sar</span>
@@ -676,7 +730,7 @@
                                 </a>
                             </div>
 
-                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                            <div class="col-lg-4 col-md-6 col-12 p-2 grid_item">
                                 <a href="product.html" class="product_card" data-aos="fade-up">
                                     <div class="media_container">
                                         <div class="img front">
@@ -690,9 +744,9 @@
                                             <div class="actions">
                                                 <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
-                                                        class="eye-btn">
-                                                        <i class="fa-regular fa-eye"></i>
-                                                    </button>
+                                                    class="eye-btn">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </button>
                                                 <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
                                                 <button><i class="fa-regular fa-bag-shopping"></i></button>
                                             </div>
@@ -710,6 +764,11 @@
                                             </ul>
                                         </div>
                                         <h6>Mixed Almond nuts juice Pack</h6>
+                                        <p class="description">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consectetur
+                                            sit mollitia nihil magnam perspiciatis eos atque qui cupiditate delectus.
+                                            Provident totam optio sapiente nam.
+                                        </p>
                                         <div class="price_quantity">
                                             <div class="price">
                                                 <span> <b>2.99</b> sar</span>
@@ -723,7 +782,7 @@
                                 </a>
                             </div>
 
-                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                            <div class="col-lg-4 col-md-6 col-12 p-2 grid_item">
                                 <a href="product.html" class="product_card" data-aos="fade-up">
                                     <div class="media_container">
                                         <div class="img front">
@@ -734,9 +793,9 @@
                                             <div class="actions">
                                                 <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
-                                                        class="eye-btn">
-                                                        <i class="fa-regular fa-eye"></i>
-                                                    </button>
+                                                    class="eye-btn">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </button>
                                                 <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
                                                 <button><i class="fa-regular fa-bag-shopping"></i></button>
                                             </div>
@@ -754,6 +813,11 @@
                                             </ul>
                                         </div>
                                         <h6>Fresh Mango Slice Juice</h6>
+                                        <p class="description">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consectetur
+                                            sit mollitia nihil magnam perspiciatis eos atque qui cupiditate delectus.
+                                            Provident totam optio sapiente nam.
+                                        </p>
                                         <div class="price_quantity">
                                             <div class="price">
                                                 <span> <b>2.99</b> sar</span>
@@ -767,12 +831,15 @@
                                 </a>
                             </div>
 
-                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                            <div class="col-lg-4 col-md-6 col-12 p-2 grid_item">
                                 <a href="product.html" class="product_card" data-aos="fade-up">
                                     <div class="media_container">
                                         <div class="img front">
                                             <div class="thumb">
                                                 <span>HOT</span>
+                                            </div>
+                                            <div class="percentage">
+                                                <span>30%</span>
                                             </div>
                                             <img src="assets/images/products/3.jpg" alt="p-1">
                                         </div>
@@ -781,9 +848,9 @@
                                             <div class="actions">
                                                 <button class="fav_btn"><i class="fa-regular fa-heart"></i></button>
                                                 <button data-bs-toggle="modal" data-bs-target="#productModal"
-                                                        class="eye-btn">
-                                                        <i class="fa-regular fa-eye"></i>
-                                                    </button>
+                                                    class="eye-btn">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </button>
                                                 <button><i class="fa-regular fa-arrow-right-arrow-left"></i></button>
                                                 <button><i class="fa-regular fa-bag-shopping"></i></button>
                                             </div>
@@ -801,6 +868,11 @@
                                             </ul>
                                         </div>
                                         <h6>Mixed Almond nuts juice Pack</h6>
+                                        <p class="description">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consectetur
+                                            sit mollitia nihil magnam perspiciatis eos atque qui cupiditate delectus.
+                                            Provident totam optio sapiente nam.
+                                        </p>
                                         <div class="price_quantity">
                                             <div class="price">
                                                 <span> <b>2.99</b> sar</span>
@@ -814,6 +886,7 @@
                                 </a>
                             </div>
 
+                            <!-- **** pagination **** -->
                             <div class="col-12 p-2">
                                 <div class="pagination_container" data-aos="fade-up">
                                     <h6>Showing 1-12 of 21 item(s)</h6>
@@ -1071,6 +1144,38 @@
             $("#priceRange").val(`$${$("#slider-range").slider("values", 0)} - $${$("#slider-range").slider("values", 1)}`);
         });
 
+    </script>
+
+    <script>
+        const gridBtn = document.getElementById("grid");
+        const listBtn = document.getElementById("list");
+        const gridItems = document.querySelectorAll(".grid_item");
+        const products = document.querySelectorAll(".product_card");
+
+
+        listBtn.addEventListener("click", () => {
+            gridBtn.classList.remove("active");
+            listBtn.classList.add("active");
+            gridItems.forEach(item => {
+                item.classList.remove("col-lg-4");
+                item.classList.remove("col-md-6");
+            });
+            products.forEach(product => {
+                product.classList.add("horizontal");
+            });
+        });
+
+        gridBtn.addEventListener("click", () => {
+            listBtn.classList.remove("active");
+            gridBtn.classList.add("active");
+            gridItems.forEach(item => {
+                item.classList.add("col-lg-4");
+                item.classList.add("col-md-6");
+            });
+            products.forEach(product => {
+                product.classList.remove("horizontal");
+            });
+        });
     </script>
 </body>
 

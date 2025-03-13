@@ -1687,9 +1687,42 @@ main {
             pointer-events: none;
           }
           &.active {
-            background: var(--main);
+            background: var(--second);
             color: var(--white);
-            border-color: var(--main);
+            border-color: var(--second);
+          }
+        }
+      }
+    }
+    .filter_products {
+      @include space-between();
+      gap: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--input-stroke);
+      background: var(--input-bg);
+      select {
+        border: 0;
+        padding: 0 14px;
+        background: transparent;
+        color: var(--main);
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .listing_type {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        button {
+          width: 32px;
+          height: 32px;
+          border-radius: 8px;
+          border: 1px solid var(--input-stroke);
+          transition: var(--transition);
+          &.active {
+            background: var(--second);
+            color: var(--white);
+            border-color: var(--second);
           }
         }
       }
@@ -2625,6 +2658,9 @@ main {
       margin: 0;
       color: var(--main);
     }
+    .description {
+      display: none;
+    }
   }
 
   &:hover {
@@ -2639,6 +2675,20 @@ main {
             transform: scale(1.1);
           }
         }
+      }
+    }
+  }
+  &.horizontal {
+    flex-direction: row;
+    .media_container {
+      flex: 1;
+      border-right: 1px solid var(--input-stroke);
+    }
+    .content {
+      flex: 3;
+      .description {
+        display: block;
+        color: var(--gray);
       }
     }
   }
